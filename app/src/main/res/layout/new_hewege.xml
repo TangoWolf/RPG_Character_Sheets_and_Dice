@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editHeightView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/heightView"
+        app:layout_constraintStart_toStartOf="@id/heightView" />
+
+    <EditText
+        android:id="@+id/editWeightView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/weightView"
+        app:layout_constraintStart_toStartOf="@id/weightView" />
+
+    <EditText
+        android:id="@+id/editGenderView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/genderView"
+        app:layout_constraintStart_toStartOf="@id/genderView" />
+
+    <TextView
+        android:id="@+id/heightView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/character_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/weightView"
+        app:layout_constraintTop_toBottomOf="@id/editHeightView" />
+
+    <TextView
+        android:id="@+id/weightView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/character_weight"
+        app:layout_constraintEnd_toStartOf="@id/genderView"
+        app:layout_constraintStart_toEndOf="@id/heightView"
+        app:layout_constraintTop_toBottomOf="@id/editWeightView" />
+
+    <TextView
+        android:id="@+id/genderView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/character_gender"
+        app:layout_constraintTop_toBottomOf="@id/editGenderView"
+        app:layout_constraintStart_toEndOf="@id/weightView"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</android.support.constraint.ConstraintLayout>

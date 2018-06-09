@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/character_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/viewNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/nameView"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/classView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/character_class"
+            android:layout_below="@id/nameView"
+            android:layout_alignParentLeft="true"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/viewClassView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewNameView"
+            android:layout_toRightOf="@id/classView"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"/>
+
+        <include
+            layout="@layout/view_lealde"
+            android:id="@+id/viewLealde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/classView"
+            android:layout_marginTop="16dp"/>
+
+        <include
+            layout="@layout/view_hewege"
+            android:id="@+id/viewHewege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewLealde"
+            android:layout_marginTop="16dp"/>
+
+        <include
+            layout="@layout/view_haeysk"
+            android:id="@+id/viewHaeysk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewHewege"
+            android:layout_marginTop="16dp"/>
+
+        <include
+            layout="@layout/view_attributes"
+            android:id="@+id/viewAttributes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewHaeysk"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/featsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feats"
+            android:layout_below="@id/viewAttributes"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/viewFeatsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/featsView"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="16dp"/>
+
+        <include
+            layout="@layout/view_skills"
+            android:id="@+id/viewSkills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewFeatsView"
+            android:layout_marginTop="16dp"/>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

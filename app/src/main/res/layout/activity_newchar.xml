@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/character_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="16dp"/>
+
+        <EditText
+            android:id="@+id/editNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/nameView"
+            android:layout_alignParentRight="true"
+            android:inputType="textCapWords"/>
+
+        <TextView
+            android:id="@+id/classView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/character_class"
+            android:layout_below="@id/nameView"
+            android:layout_alignParentLeft="true"
+            android:padding="16dp"/>
+
+        <EditText
+            android:id="@+id/editClassView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNameView"
+            android:layout_toRightOf="@id/classView"
+            android:layout_alignParentRight="true"
+            android:inputType="textCapWords"/>
+
+        <include
+            layout="@layout/new_lealde"
+            android:id="@+id/lealde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/classView"
+            android:layout_marginTop="16dp"/>
+
+        <include
+            layout="@layout/new_hewege"
+            android:id="@+id/hewege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lealde"
+            android:layout_marginTop="16dp"/>
+
+        <include
+            layout="@layout/new_haeysk"
+            android:id="@+id/haeysk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hewege"
+            android:layout_marginTop="16dp"/>
+
+        <include
+            layout="@layout/new_attributes"
+            android:id="@+id/attributes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/haeysk"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/featsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feats"
+            android:layout_below="@id/attributes"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editFeatsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/featsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <include
+            layout="@layout/new_skills"
+            android:id="@+id/skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editFeatsView"
+            android:layout_marginTop="16dp"/>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/attributesView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/attributes"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/str"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/strength"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/attributesView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/strStat"
+        app:layout_constraintBottom_toTopOf="@id/con"/>
+
+    <TextView
+        android:id="@+id/dex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dexterity"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/attributesView"
+        app:layout_constraintStart_toEndOf="@id/strStat"
+        app:layout_constraintEnd_toStartOf="@id/dexStat"
+        app:layout_constraintBottom_toTopOf="@id/intelligence"/>
+
+    <TextView
+        android:id="@+id/con"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/constitution"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/str"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/conStat"
+        app:layout_constraintBottom_toTopOf="@id/wis"/>
+
+    <TextView
+        android:id="@+id/intelligence"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/intelligence"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/dex"
+        app:layout_constraintStart_toEndOf="@id/conStat"
+        app:layout_constraintEnd_toStartOf="@id/intStat"
+        app:layout_constraintBottom_toTopOf="@id/cha"/>
+
+    <TextView
+        android:id="@+id/wis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/wisdom"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/con"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/wisStat"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/cha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/charisma"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/intelligence"
+        app:layout_constraintStart_toEndOf="@id/wisStat"
+        app:layout_constraintEnd_toStartOf="@id/chaStat"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/strStat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/attributesView"
+        app:layout_constraintEnd_toStartOf="@id/dex"
+        app:layout_constraintStart_toEndOf="@id/str"
+        app:layout_constraintBottom_toTopOf="@id/conStat"/>
+
+    <EditText
+        android:id="@+id/dexStat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/attributesView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dex"
+        app:layout_constraintBottom_toTopOf="@id/intStat"/>
+
+    <EditText
+        android:id="@+id/conStat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/strStat"
+        app:layout_constraintEnd_toStartOf="@id/intelligence"
+        app:layout_constraintStart_toEndOf="@id/con"
+        app:layout_constraintBottom_toTopOf="@id/wisStat"/>
+
+    <EditText
+        android:id="@+id/intStat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/dexStat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/intelligence"
+        app:layout_constraintBottom_toTopOf="@id/chaStat"/>
+
+    <EditText
+        android:id="@+id/wisStat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/conStat"
+        app:layout_constraintEnd_toStartOf="@id/cha"
+        app:layout_constraintStart_toEndOf="@id/wis"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/chaStat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/intStat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cha"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>
