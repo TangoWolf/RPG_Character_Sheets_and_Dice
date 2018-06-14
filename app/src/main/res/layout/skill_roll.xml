@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/acrobatics_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/acrobatics_button"
+        android:onClick="acrobaticsRoll"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/acrobatics_textview"
+        app:layout_constraintBottom_toTopOf="@id/animal_handling_button"/>
+
+    <TextView
+        android:id="@+id/acrobatics_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acrobatics_roll"
+        app:layout_constraintTop_toTopOf="@id/acrobatics_button"
+        app:layout_constraintStart_toEndOf="@id/acrobatics_button"
+        app:layout_constraintEnd_toStartOf="@id/acrobatics_roll"
+        app:layout_constraintBottom_toBottomOf="@id/acrobatics_button"/>
+
+    <TextView
+        android:id="@+id/acrobatics_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/acrobatics_button"
+        app:layout_constraintStart_toEndOf="@id/acrobatics_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/acrobatics_button" />
+
+    <Button
+        android:id="@+id/animal_handling_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/animal_handling_button"
+        android:onClick="animalHandlingRoll"
+        app:layout_constraintTop_toBottomOf="@id/acrobatics_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/animal_handling_textview"
+        app:layout_constraintBottom_toTopOf="@id/arcana_button"/>
+
+    <TextView
+        android:id="@+id/animal_handling_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/animal_handling_roll"
+        app:layout_constraintTop_toTopOf="@id/animal_handling_button"
+        app:layout_constraintStart_toEndOf="@id/animal_handling_button"
+        app:layout_constraintEnd_toStartOf="@id/animal_handling_roll"
+        app:layout_constraintBottom_toBottomOf="@id/animal_handling_button"/>
+
+    <TextView
+        android:id="@+id/animal_handling_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/animal_handling_button"
+        app:layout_constraintStart_toEndOf="@id/animal_handling_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/animal_handling_button" />
+
+    <Button
+        android:id="@+id/arcana_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/arcana_button"
+        android:onClick="arcanaRoll"
+        app:layout_constraintTop_toBottomOf="@id/animal_handling_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/arcana_textview"
+        app:layout_constraintBottom_toTopOf="@id/athletics_button"/>
+
+    <TextView
+        android:id="@+id/arcana_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arcana_roll"
+        app:layout_constraintTop_toTopOf="@id/arcana_button"
+        app:layout_constraintStart_toEndOf="@id/arcana_button"
+        app:layout_constraintEnd_toStartOf="@id/arcana_roll"
+        app:layout_constraintBottom_toBottomOf="@id/arcana_button"/>
+
+    <TextView
+        android:id="@+id/arcana_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/arcana_button"
+        app:layout_constraintStart_toEndOf="@id/arcana_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/arcana_button" />
+
+    <Button
+        android:id="@+id/athletics_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/athletics_button"
+        android:onClick="athleticsRoll"
+        app:layout_constraintTop_toBottomOf="@id/arcana_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/athletics_textview"
+        app:layout_constraintBottom_toTopOf="@id/deception_button"/>
+
+    <TextView
+        android:id="@+id/athletics_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/athletics_roll"
+        app:layout_constraintTop_toTopOf="@id/athletics_button"
+        app:layout_constraintStart_toEndOf="@id/athletics_button"
+        app:layout_constraintEnd_toStartOf="@id/athletics_roll"
+        app:layout_constraintBottom_toBottomOf="@id/athletics_button"/>
+
+    <TextView
+        android:id="@+id/athletics_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/athletics_button"
+        app:layout_constraintStart_toEndOf="@id/athletics_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/athletics_button" />
+
+    <Button
+        android:id="@+id/deception_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/deception_button"
+        android:onClick="deceptionRoll"
+        app:layout_constraintTop_toBottomOf="@id/athletics_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/deception_textview"
+        app:layout_constraintBottom_toTopOf="@id/history_button"/>
+
+    <TextView
+        android:id="@+id/deception_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deception_roll"
+        app:layout_constraintTop_toTopOf="@id/deception_button"
+        app:layout_constraintStart_toEndOf="@id/deception_button"
+        app:layout_constraintEnd_toStartOf="@id/deception_roll"
+        app:layout_constraintBottom_toBottomOf="@id/deception_button"/>
+
+    <TextView
+        android:id="@+id/deception_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/deception_button"
+        app:layout_constraintStart_toEndOf="@id/deception_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/deception_button" />
+
+    <Button
+        android:id="@+id/history_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/history_button"
+        android:onClick="historyRoll"
+        app:layout_constraintTop_toBottomOf="@id/deception_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/history_textview"
+        app:layout_constraintBottom_toTopOf="@id/insight_button"/>
+
+    <TextView
+        android:id="@+id/history_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history_roll"
+        app:layout_constraintTop_toTopOf="@id/history_button"
+        app:layout_constraintStart_toEndOf="@id/history_button"
+        app:layout_constraintEnd_toStartOf="@id/history_roll"
+        app:layout_constraintBottom_toBottomOf="@id/history_button"/>
+
+    <TextView
+        android:id="@+id/history_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/history_button"
+        app:layout_constraintStart_toEndOf="@id/history_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/history_button" />
+
+    <Button
+        android:id="@+id/insight_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/insight_button"
+        android:onClick="insightRoll"
+        app:layout_constraintTop_toBottomOf="@id/history_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/insight_textview"
+        app:layout_constraintBottom_toTopOf="@id/intimidation_button"/>
+
+    <TextView
+        android:id="@+id/insight_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/insight_roll"
+        app:layout_constraintTop_toTopOf="@id/insight_button"
+        app:layout_constraintStart_toEndOf="@id/insight_button"
+        app:layout_constraintEnd_toStartOf="@id/insight_roll"
+        app:layout_constraintBottom_toBottomOf="@id/insight_button"/>
+
+    <TextView
+        android:id="@+id/insight_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/insight_button"
+        app:layout_constraintStart_toEndOf="@id/insight_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/insight_button" />
+
+
+    <Button
+        android:id="@+id/intimidation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/intimidation_button"
+        android:onClick="intimidationRoll"
+        app:layout_constraintTop_toBottomOf="@id/insight_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/intimidation_textview"
+        app:layout_constraintBottom_toTopOf="@id/investigation_button"/>
+
+    <TextView
+        android:id="@+id/intimidation_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intimidation_roll"
+        app:layout_constraintTop_toTopOf="@id/intimidation_button"
+        app:layout_constraintStart_toEndOf="@id/intimidation_button"
+        app:layout_constraintEnd_toStartOf="@id/intimidation_roll"
+        app:layout_constraintBottom_toBottomOf="@id/intimidation_button"/>
+
+    <TextView
+        android:id="@+id/intimidation_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/intimidation_button"
+        app:layout_constraintStart_toEndOf="@id/intimidation_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/intimidation_button" />
+
+    <Button
+        android:id="@+id/investigation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/investigation_button"
+        android:onClick="investigationRoll"
+        app:layout_constraintTop_toBottomOf="@id/intimidation_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/investigation_textview"
+        app:layout_constraintBottom_toTopOf="@id/medicine_button"/>
+
+    <TextView
+        android:id="@+id/investigation_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/investigation_roll"
+        app:layout_constraintTop_toTopOf="@id/investigation_button"
+        app:layout_constraintStart_toEndOf="@id/investigation_button"
+        app:layout_constraintEnd_toStartOf="@id/investigation_roll"
+        app:layout_constraintBottom_toBottomOf="@id/investigation_button"/>
+
+    <TextView
+        android:id="@+id/investigation_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/investigation_button"
+        app:layout_constraintStart_toEndOf="@id/investigation_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/investigation_button" />
+
+    <Button
+        android:id="@+id/medicine_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/medicine_button"
+        android:onClick="medicineRoll"
+        app:layout_constraintTop_toBottomOf="@id/investigation_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/medicine_textview"
+        app:layout_constraintBottom_toTopOf="@id/nature_button"/>
+
+    <TextView
+        android:id="@+id/medicine_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_roll"
+        app:layout_constraintTop_toTopOf="@id/medicine_button"
+        app:layout_constraintStart_toEndOf="@id/medicine_button"
+        app:layout_constraintEnd_toStartOf="@id/medicine_roll"
+        app:layout_constraintBottom_toBottomOf="@id/medicine_button"/>
+
+    <TextView
+        android:id="@+id/medicine_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/medicine_button"
+        app:layout_constraintStart_toEndOf="@id/medicine_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/medicine_button" />
+
+    <Button
+        android:id="@+id/nature_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/nature_button"
+        android:onClick="natureRoll"
+        app:layout_constraintTop_toBottomOf="@id/medicine_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/nature_textview"
+        app:layout_constraintBottom_toTopOf="@id/perception_button"/>
+
+    <TextView
+        android:id="@+id/nature_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nature_roll"
+        app:layout_constraintTop_toTopOf="@id/nature_button"
+        app:layout_constraintStart_toEndOf="@id/nature_button"
+        app:layout_constraintEnd_toStartOf="@id/nature_roll"
+        app:layout_constraintBottom_toBottomOf="@id/nature_button"/>
+
+    <TextView
+        android:id="@+id/nature_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/nature_button"
+        app:layout_constraintStart_toEndOf="@id/nature_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/nature_button" />
+
+    <Button
+        android:id="@+id/perception_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/perception_button"
+        android:onClick="perceptionRoll"
+        app:layout_constraintTop_toBottomOf="@id/nature_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/perception_textview"
+        app:layout_constraintBottom_toTopOf="@id/performance_button"/>
+
+    <TextView
+        android:id="@+id/perception_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perception_roll"
+        app:layout_constraintTop_toTopOf="@id/perception_button"
+        app:layout_constraintStart_toEndOf="@id/perception_button"
+        app:layout_constraintEnd_toStartOf="@id/perception_roll"
+        app:layout_constraintBottom_toBottomOf="@id/perception_button"/>
+
+    <TextView
+        android:id="@+id/perception_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/perception_button"
+        app:layout_constraintStart_toEndOf="@id/perception_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/perception_button" />
+
+    <Button
+        android:id="@+id/performance_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/performance_button"
+        android:onClick="performanceRoll"
+        app:layout_constraintTop_toBottomOf="@id/perception_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/performance_textview"
+        app:layout_constraintBottom_toTopOf="@id/persuasion_button"/>
+
+    <TextView
+        android:id="@+id/performance_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/performance_roll"
+        app:layout_constraintTop_toTopOf="@id/performance_button"
+        app:layout_constraintStart_toEndOf="@id/performance_button"
+        app:layout_constraintEnd_toStartOf="@id/performance_roll"
+        app:layout_constraintBottom_toBottomOf="@id/performance_button"/>
+
+    <TextView
+        android:id="@+id/performance_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/performance_button"
+        app:layout_constraintStart_toEndOf="@id/performance_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/performance_button" />
+
+    <Button
+        android:id="@+id/persuasion_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/persuasion_button"
+        android:onClick="persuasionRoll"
+        app:layout_constraintTop_toBottomOf="@id/performance_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/persuasion_textview"
+        app:layout_constraintBottom_toTopOf="@id/religion_button"/>
+
+    <TextView
+        android:id="@+id/persuasion_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/persuasion_roll"
+        app:layout_constraintTop_toTopOf="@id/persuasion_button"
+        app:layout_constraintStart_toEndOf="@id/persuasion_button"
+        app:layout_constraintEnd_toStartOf="@id/persuasion_roll"
+        app:layout_constraintBottom_toBottomOf="@id/persuasion_button"/>
+
+    <TextView
+        android:id="@+id/persuasion_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/persuasion_button"
+        app:layout_constraintStart_toEndOf="@id/persuasion_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/persuasion_button" />
+
+    <Button
+        android:id="@+id/religion_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/religion_button"
+        android:onClick="religionRoll"
+        app:layout_constraintTop_toBottomOf="@id/persuasion_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/religion_textview"
+        app:layout_constraintBottom_toTopOf="@id/sleight_of_hand_button"/>
+
+    <TextView
+        android:id="@+id/religion_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/religion_roll"
+        app:layout_constraintTop_toTopOf="@id/religion_button"
+        app:layout_constraintStart_toEndOf="@id/religion_button"
+        app:layout_constraintEnd_toStartOf="@id/religion_roll"
+        app:layout_constraintBottom_toBottomOf="@id/religion_button"/>
+
+    <TextView
+        android:id="@+id/religion_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/religion_button"
+        app:layout_constraintStart_toEndOf="@id/religion_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/religion_button" />
+
+    <Button
+        android:id="@+id/sleight_of_hand_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/sleight_of_hand_button"
+        android:onClick="sleightOfHandRoll"
+        app:layout_constraintTop_toBottomOf="@id/religion_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sleight_of_hand_textview"
+        app:layout_constraintBottom_toTopOf="@id/stealth_button"/>
+
+    <TextView
+        android:id="@+id/sleight_of_hand_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sleight_of_hand_roll"
+        app:layout_constraintTop_toTopOf="@id/sleight_of_hand_button"
+        app:layout_constraintStart_toEndOf="@id/sleight_of_hand_button"
+        app:layout_constraintEnd_toStartOf="@id/sleight_of_hand_roll"
+        app:layout_constraintBottom_toBottomOf="@id/sleight_of_hand_button"/>
+
+    <TextView
+        android:id="@+id/sleight_of_hand_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/sleight_of_hand_button"
+        app:layout_constraintStart_toEndOf="@id/sleight_of_hand_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/sleight_of_hand_button" />
+
+    <Button
+        android:id="@+id/stealth_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/stealth_button"
+        android:onClick="stealthRoll"
+        app:layout_constraintTop_toBottomOf="@id/sleight_of_hand_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/stealth_textview"
+        app:layout_constraintBottom_toTopOf="@id/survival_button"/>
+
+    <TextView
+        android:id="@+id/stealth_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stealth_roll"
+        app:layout_constraintTop_toTopOf="@id/stealth_button"
+        app:layout_constraintStart_toEndOf="@id/stealth_button"
+        app:layout_constraintEnd_toStartOf="@id/stealth_roll"
+        app:layout_constraintBottom_toBottomOf="@id/stealth_button"/>
+
+    <TextView
+        android:id="@+id/stealth_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/stealth_button"
+        app:layout_constraintStart_toEndOf="@id/stealth_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/stealth_button" />
+
+    <Button
+        android:id="@+id/survival_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/survival_button"
+        android:onClick="survivalRoll"
+        app:layout_constraintTop_toBottomOf="@id/stealth_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/survival_textview"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/survival_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/survival_roll"
+        app:layout_constraintTop_toTopOf="@id/survival_button"
+        app:layout_constraintStart_toEndOf="@id/survival_button"
+        app:layout_constraintEnd_toStartOf="@id/survival_roll"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/survival_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/survival_button"
+        app:layout_constraintStart_toEndOf="@id/survival_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

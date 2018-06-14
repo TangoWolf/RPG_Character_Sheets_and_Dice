@@ -4,6 +4,7 @@ import android.content.ContentUris;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -19,9 +20,16 @@ import android.widget.TextView;
 
 import com.example.shaol.char_sheet.data.CharacterContract.CharacterEntry;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    private TextView mEmptyView;
+    @BindView(R.id.listView) ListView characterListView;
+    @BindView(R.id.emptyView) TextView mEmptyView;
+    @BindView(R.id.floatingActionButton)
+    FloatingActionButton mFab;
+
     private static final int CHARACTER_LOADER = 0;
     CharacterAdapter mAdapter;
 
@@ -31,9 +39,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setContentView(R.layout.activity_main);
         setTitle(R.string.available_characters);
 
-        ListView characterListView = (ListView) findViewById(R.id.listView);
+        ButterKnife.bind(this);
 
-        mEmptyView = (TextView) findViewById(R.id.emptyView);
         characterListView.setEmptyView(mEmptyView);
 
         mAdapter = new CharacterAdapter(this, null);
@@ -49,6 +56,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 intent.setData(currentCharacterUri);
 
                 startActivity(intent);
+            }
+        });
+
+        mFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mapsIntent = new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(mapsIntent);
             }
         });
 

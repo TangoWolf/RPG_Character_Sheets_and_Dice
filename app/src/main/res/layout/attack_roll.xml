@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/first_weapon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/first_weapon_button"
+            android:onClick="firstWeaponRoll"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_weapon_textview"
+            app:layout_constraintBottom_toTopOf="@id/first_damage_button"/>
+
+        <TextView
+            android:id="@+id/first_weapon_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_weapon_roll"
+            app:layout_constraintTop_toTopOf="@id/first_weapon_button"
+            app:layout_constraintStart_toEndOf="@id/first_weapon_button"
+            app:layout_constraintEnd_toStartOf="@id/first_weapon_roll"
+            app:layout_constraintBottom_toBottomOf="@id/first_weapon_button"/>
+
+        <TextView
+            android:id="@+id/first_weapon_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/first_weapon_button"
+            app:layout_constraintStart_toEndOf="@id/first_weapon_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/first_weapon_button" />
+
+        <Button
+            android:id="@+id/first_damage_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/first_damage_button"
+            android:onClick="firstDamageRoll"
+            app:layout_constraintTop_toBottomOf="@id/first_weapon_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_damage_roll"
+            app:layout_constraintBottom_toTopOf="@id/second_weapon_button"/>
+
+        <TextView
+            android:id="@+id/first_damage_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/first_damage_button"
+            app:layout_constraintStart_toEndOf="@id/first_damage_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/first_damage_button" />
+
+        <Button
+            android:id="@+id/second_weapon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/second_weapon_button"
+            android:onClick="secondWeaponRoll"
+            app:layout_constraintTop_toBottomOf="@id/first_damage_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/second_weapon_textview"
+            app:layout_constraintBottom_toTopOf="@id/second_damage_button"/>
+
+        <TextView
+            android:id="@+id/second_weapon_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/second_weapon_roll"
+            app:layout_constraintTop_toTopOf="@id/second_weapon_button"
+            app:layout_constraintStart_toEndOf="@id/second_weapon_button"
+            app:layout_constraintEnd_toStartOf="@id/second_weapon_roll"
+            app:layout_constraintBottom_toBottomOf="@id/second_weapon_button"/>
+
+        <TextView
+            android:id="@+id/second_weapon_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/second_weapon_button"
+            app:layout_constraintStart_toEndOf="@id/second_weapon_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/second_weapon_button" />
+
+        <Button
+            android:id="@+id/second_damage_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/second_damage_button"
+            android:onClick="secondDamageRoll"
+            app:layout_constraintTop_toBottomOf="@id/second_weapon_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/second_damage_roll"
+            app:layout_constraintBottom_toTopOf="@id/third_weapon_button"/>
+
+        <TextView
+            android:id="@+id/second_damage_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/second_damage_button"
+            app:layout_constraintStart_toEndOf="@id/second_damage_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/second_damage_button" />
+
+        <Button
+            android:id="@+id/third_weapon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/third_weapon_button"
+            android:onClick="thirdWeaponRoll"
+            app:layout_constraintTop_toBottomOf="@id/second_damage_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/third_weapon_textview"
+            app:layout_constraintBottom_toTopOf="@id/third_damage_button"/>
+
+        <TextView
+            android:id="@+id/third_weapon_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/third_weapon_roll"
+            app:layout_constraintTop_toTopOf="@id/third_weapon_button"
+            app:layout_constraintStart_toEndOf="@id/third_weapon_button"
+            app:layout_constraintEnd_toStartOf="@id/third_weapon_roll"
+            app:layout_constraintBottom_toBottomOf="@id/third_weapon_button"/>
+
+        <TextView
+            android:id="@+id/third_weapon_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/third_weapon_button"
+            app:layout_constraintStart_toEndOf="@id/third_weapon_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/third_weapon_button" />
+
+        <Button
+            android:id="@+id/third_damage_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/third_damage_button"
+            android:onClick="thirdDamageRoll"
+            app:layout_constraintTop_toBottomOf="@id/third_weapon_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/third_damage_roll"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/third_damage_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/third_damage_button"
+            app:layout_constraintStart_toEndOf="@id/third_damage_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/third_damage_button" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,8 +32,15 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
     private Uri mCurrentCharacterUri;
     private static String[] attributez;
 
+    private static int firstDamage;
+    private static int secondDamage;
+    private static int thirdDamage;
+
     @BindView(R.id.viewNameView) TextView mCharacterName;
     @BindView(R.id.viewClassView) TextView mCharacterClass;
+    @BindView(R.id.viewRaceView) TextView mCharacterRace;
+    @BindView(R.id.viewBackgroundView) TextView mCharacterBackground;
+    @BindView(R.id.viewXPView) TextView mCharacterXP;
     @BindView(R.id.viewLevelView) TextView mCharacterLevel;
     @BindView(R.id.viewAlignmentView) TextView mCharacterAlignment;
     @BindView(R.id.viewDeityView) TextView mCharacterDeity;
@@ -42,6 +50,12 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
     @BindView(R.id.viewHairView) TextView mCharacterHair;
     @BindView(R.id.viewEyesView) TextView mCharacterEyes;
     @BindView(R.id.viewSkinView) TextView mCharacterSkin;
+    @BindView(R.id.viewProficiencyView) TextView mCharacterProficiency;
+    @BindView(R.id.viewHealthPointsView) TextView mCharacterHealthPoints;
+    @BindView(R.id.viewTemporaryHealthPointsView) TextView mCharacterTemporaryHealthPoints;
+    @BindView(R.id.viewArmorClassView) TextView mCharacterArmorClass;
+    @BindView(R.id.viewSpellcastingClassView) TextView mCharacterSpellcastingClass;
+    @BindView(R.id.viewSpeedView) TextView mCharacterSpeed;
     @BindView(R.id.viewStrStat) TextView mCharacterStr;
     @BindView(R.id.viewStrStatMod) TextView mCharacterStrMod;
     @BindView(R.id.viewDexStat) TextView mCharacterDex;
@@ -73,6 +87,40 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
     @BindView(R.id.viewSleightOfHand) TextView mCharacterSleightOfHand;
     @BindView(R.id.viewStealth) TextView mCharacterStealth;
     @BindView(R.id.viewSurvival) TextView mCharacterSurvival;
+    @BindView(R.id.viewFirstNameView) TextView mFirstWeaponName;
+    @BindView(R.id.viewFirstBonusView) TextView mFirstWeaponBonus;
+    @BindView(R.id.viewFirstDamageView) TextView mFirstWeaponDamage;
+    @BindView(R.id.viewFirstTypeView) TextView mFirstWeaponType;
+    @BindView(R.id.viewSecondNameView) TextView mSecondWeaponName;
+    @BindView(R.id.viewSecondBonusView) TextView mSecondWeaponBonus;
+    @BindView(R.id.viewSecondDamageView) TextView mSecondWeaponDamage;
+    @BindView(R.id.viewSecondTypeView) TextView mSecondWeaponType;
+    @BindView(R.id.viewThirdNameView) TextView mThirdWeaponName;
+    @BindView(R.id.viewThirdBonusView) TextView mThirdWeaponBonus;
+    @BindView(R.id.viewThirdDamageView) TextView mThirdWeaponDamage;
+    @BindView(R.id.viewThirdTypeView) TextView mThirdWeaponType;
+    @BindView(R.id.viewPreparedSpellsView) TextView mPreparedSpells;
+    @BindView(R.id.viewEquipmentView) TextView mEquipment;
+    @BindView(R.id.viewLanguagesView) TextView mLanguages;
+    @BindView(R.id.viewPersonalityView) TextView mPersonality;
+    @BindView(R.id.viewIdealsView) TextView mIdeals;
+    @BindView(R.id.viewBondsView) TextView mBonds;
+    @BindView(R.id.viewFlawsView) TextView mFlaws;
+    @BindView(R.id.viewAlliesView) TextView mAllies;
+    @BindView(R.id.viewBackstoryView) TextView mBackstory;
+    @BindView(R.id.viewSpellcastingAbilityView) TextView mSpellcastingAbility;
+    @BindView(R.id.viewSpellSaveDCView) TextView mSpellSaveDC;
+    @BindView(R.id.viewSpellAttackBonusView) TextView mSpellAttackBonus;
+    @BindView(R.id.viewLevelZeroSpellsView) TextView mLevelZeroSpells;
+    @BindView(R.id.viewLevelOneSpellsView) TextView mLevelOneSpells;
+    @BindView(R.id.viewLevelTwoSpellsView) TextView mLevelTwoSpells;
+    @BindView(R.id.viewLevelThreeSpellsView) TextView mLevelThreeSpells;
+    @BindView(R.id.viewLevelFourSpellsView) TextView mLevelFourSpells;
+    @BindView(R.id.viewLevelFiveSpellsView) TextView mLevelFiveSpells;
+    @BindView(R.id.viewLevelSixSpellsView) TextView mLevelSixSpells;
+    @BindView(R.id.viewLevelSevenSpellsView) TextView mLevelSevenSpells;
+    @BindView(R.id.viewLevelEightSpellsView) TextView mLevelEightSpells;
+    @BindView(R.id.viewLevelNineSpellsView) TextView mLevelNineSpells;
 
     private static final int EXISTING_CHARACTER_LOADER = 0;
 
@@ -99,6 +147,75 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.make_skill_rolls:
+                String[] skillz = new String[18];
+                skillz[0] = mCharacterAcrobatics.getText().toString();
+                skillz[1] = mCharacterAnimalHandling.getText().toString();
+                skillz[2] = mCharacterArcana.getText().toString();
+                skillz[3] = mCharacterAthletics.getText().toString();
+                skillz[4] = mCharacterDeception.getText().toString();
+                skillz[5] = mCharacterHistory.getText().toString();
+                skillz[6] = mCharacterInsight.getText().toString();
+                skillz[7] = mCharacterIntimidation.getText().toString();
+                skillz[8] = mCharacterInvestigation.getText().toString();
+                skillz[9] = mCharacterMedicine.getText().toString();
+                skillz[10] = mCharacterNature.getText().toString();
+                skillz[11] = mCharacterPerception.getText().toString();
+                skillz[12] = mCharacterPerformance.getText().toString();
+                skillz[13] = mCharacterPersuasion.getText().toString();
+                skillz[14] = mCharacterReligion.getText().toString();
+                skillz[15] = mCharacterSleightOfHand.getText().toString();
+                skillz[16] = mCharacterStealth.getText().toString();
+                skillz[17] = mCharacterSurvival.getText().toString();
+
+                Intent skillsIntent = new Intent(ViewCharActivity.this, SkillRoll.class);
+                skillsIntent.putExtra("Skills", skillz);
+                startActivity(skillsIntent);
+                return true;
+
+            case R.id.make_saving_rolls:
+                String[] attributes = new String[6];
+                attributes[0] = mCharacterStrMod.getText().toString();
+                attributes[1] = mCharacterDexMod.getText().toString();
+                attributes[2] = mCharacterConMod.getText().toString();
+                attributes[3] = mCharacterIntMod.getText().toString();
+                attributes[4] = mCharacterWisMod.getText().toString();
+                attributes[5] = mCharacterChaMod.getText().toString();
+
+                Intent attributesIntent = new Intent(ViewCharActivity.this, SavingRoll.class);
+                attributesIntent.putExtra("Attributes", attributes);
+                startActivity(attributesIntent);
+                return true;
+
+            case R.id.make_attack_rolls:
+                String[] names = new String[3];
+                names[0] = mFirstWeaponName.getText().toString();
+                names[1] = mSecondWeaponName.getText().toString();
+                names[2] = mThirdWeaponName.getText().toString();
+
+                String[] bonus = new String[3];
+                bonus[0] = mFirstWeaponBonus.getText().toString();
+                bonus[1] = mSecondWeaponBonus.getText().toString();
+                bonus[2] = mThirdWeaponBonus.getText().toString();
+
+                int[] damages = new int[3];
+                damages[0] = firstDamage;
+                damages[1] = secondDamage;
+                damages[2] = thirdDamage;
+
+
+                Intent attacksIntent = new Intent(ViewCharActivity.this, AttackRoll.class);
+                attacksIntent.putExtra("Names", names);
+                attacksIntent.putExtra("Bonus", bonus);
+                attacksIntent.putExtra("Damages", damages);
+                startActivity(attacksIntent);
+                return true;
+
+            case R.id.make_custom_rolls:
+                Intent customIntent = new Intent(ViewCharActivity.this, CustomRoll.class);
+                startActivity(customIntent);
+                return true;
+
             case R.id.edit_character:
                 editCharacter();
                 finish();
@@ -155,6 +272,9 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
                 CharacterEntry._ID,
                 CharacterEntry.COLUMN_CHARACTER_NAME,
                 CharacterEntry.COLUMN_CHARACTER_CLASS,
+                CharacterEntry.COLUMN_CHARACTER_RACE,
+                CharacterEntry.COLUMN_CHARACTER_BACKGROUND,
+                CharacterEntry.COLUMN_CHARACTER_EXPERIENCE,
                 CharacterEntry.COLUMN_CHARACTER_LEVEL,
                 CharacterEntry.COLUMN_CHARACTER_ALIGNMENT,
                 CharacterEntry.COLUMN_CHARACTER_DEITY,
@@ -164,6 +284,12 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
                 CharacterEntry.COLUMN_CHARACTER_HAIR,
                 CharacterEntry.COLUMN_CHARACTER_EYES,
                 CharacterEntry.COLUMN_CHARACTER_SKIN,
+                CharacterEntry.COLUMN_CHARACTER_PROFICIENCY,
+                CharacterEntry.COLUMN_CHARACTER_HEALTHPOINTS,
+                CharacterEntry.COLUMN_CHARACTER_TEMPORARYHEALTHPOINTS,
+                CharacterEntry.COLUMN_CHARACTER_ARMORCLASS,
+                CharacterEntry.COLUMN_CHARACTER_SPELLCASTINGCLASS,
+                CharacterEntry.COLUMN_CHARACTER_SPEED,
                 CharacterEntry.COLUMN_CHARACTER_STRENGTH,
                 CharacterEntry.COLUMN_CHARACTER_DEXTERITY,
                 CharacterEntry.COLUMN_CHARACTER_CONSTITUTION,
@@ -188,7 +314,44 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
                 CharacterEntry.COLUMN_CHARACTER_RELIGION,
                 CharacterEntry.COLUMN_CHARACTER_SLEIGHTOFHAND,
                 CharacterEntry.COLUMN_CHARACTER_STEALTH,
-                CharacterEntry.COLUMN_CHARACTER_SURVIVAL
+                CharacterEntry.COLUMN_CHARACTER_SURVIVAL,
+                CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONNAME,
+                CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONBONUS,
+                CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONDAMAGE,
+                CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONDAMAGEID,
+                CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONTYPE,
+                CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONNAME,
+                CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONBONUS,
+                CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONDAMAGE,
+                CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONDAMAGEID,
+                CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONTYPE,
+                CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONNAME,
+                CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONBONUS,
+                CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONDAMAGE,
+                CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONDAMAGEID,
+                CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONTYPE,
+                CharacterEntry.COLUMN_CHARACTER_PREPAREDSPELLS,
+                CharacterEntry.COLUMN_CHARACTER_EQUIPMENT,
+                CharacterEntry.COLUMN_CHARACTER_LANGUAGES,
+                CharacterEntry.COLUMN_CHARACTER_PERSONALITY,
+                CharacterEntry.COLUMN_CHARACTER_IDEALS,
+                CharacterEntry.COLUMN_CHARACTER_BONDS,
+                CharacterEntry.COLUMN_CHARACTER_FLAWS,
+                CharacterEntry.COLUMN_CHARACTER_ALLIES,
+                CharacterEntry.COLUMN_CHARACTER_BACKSTORY,
+                CharacterEntry.COLUMN_CHARACTER_SPELLCASTINGABILITY,
+                CharacterEntry.COLUMN_CHARACTER_SPELLSAVEDC,
+                CharacterEntry.COLUMN_CHARACTER_SPELLATTACKBONUS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELZEROSPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELONESPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELTWOSPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELTHREESPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELFOURSPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELFIVESPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELSIXSPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELSEVENSPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELEIGHTSPELLS,
+                CharacterEntry.COLUMN_CHARACTER_LEVELNINESPELLS
         };
 
         return new CursorLoader(this, mCurrentCharacterUri, projection, null, null, null);
@@ -199,6 +362,9 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
         if ( cursor != null && cursor.moveToFirst()) {
             int nameCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_NAME);
             int classCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_CLASS);
+            int raceCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_RACE);
+            int backgroundCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_BACKGROUND);
+            int experienceCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_EXPERIENCE);
             int levelCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVEL);
             int alignmentCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_ALIGNMENT);
             int deityCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_DEITY);
@@ -208,6 +374,12 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
             int hairCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_HAIR);
             int eyesCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_EYES);
             int skinCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SKIN);
+            int proficiencyCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_PROFICIENCY);
+            int healthPointsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_HEALTHPOINTS);
+            int temporaryHealthPointsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_TEMPORARYHEALTHPOINTS);
+            int armorClassCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_ARMORCLASS);
+            int spellcastingClassCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SPELLCASTINGCLASS);
+            int speedCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SPEED);
             int strCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_STRENGTH);
             int dexCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_DEXTERITY);
             int conCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_CONSTITUTION);
@@ -233,9 +405,49 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
             int sleightOfHandCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SLEIGHTOFHAND);
             int stealthCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_STEALTH);
             int survivalCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SURVIVAL);
+            int firstWeaponNameCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONNAME);
+            int firstWeaponBonusCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONBONUS);
+            int firstWeaponDamageCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONDAMAGE);
+            int firstWeaponDamageIdCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONDAMAGEID);
+            int firstWeaponTypeCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_FIRSTWEAPONTYPE);
+            int secondWeaponNameCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONNAME);
+            int secondWeaponBonusCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONBONUS);
+            int secondWeaponDamageCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONDAMAGE);
+            int secondWeaponDamageIdCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONDAMAGEID);
+            int secondWeaponTypeCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SECONDWEAPONTYPE);
+            int thirdWeaponNameCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONNAME);
+            int thirdWeaponBonusCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONBONUS);
+            int thirdWeaponDamageCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONDAMAGE);
+            int thirdWeaponDamageIdCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONDAMAGEID);
+            int thirdWeaponTypeCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_THIRDWEAPONTYPE);
+            int preparedSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_PREPAREDSPELLS);
+            int equipmentCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_EQUIPMENT);
+            int languagesCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LANGUAGES);
+            int personalityCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_PERSONALITY);
+            int idealsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_IDEALS);
+            int bondsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_BONDS);
+            int flawsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_FLAWS);
+            int alliesCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_ALLIES);
+            int backstoryCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_BACKSTORY);
+            int spellcastingAbilityCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SPELLCASTINGABILITY);
+            int spellSaveDCCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SPELLSAVEDC);
+            int spellAttackBonusCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_SPELLATTACKBONUS);
+            int levelZeroSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELZEROSPELLS);
+            int levelOneSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELONESPELLS);
+            int levelTwoSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELTWOSPELLS);
+            int levelThreeSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELTHREESPELLS);
+            int levelFourSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELFOURSPELLS);
+            int levelFiveSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELFIVESPELLS);
+            int levelSixSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELSIXSPELLS);
+            int levelSevenSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELSEVENSPELLS);
+            int levelEightSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELEIGHTSPELLS);
+            int levelNineSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELNINESPELLS);
 
             String name = cursor.getString(nameCI);
             String charClass = cursor.getString(classCI);
+            String race = cursor.getString(raceCI);
+            String background = cursor.getString(backgroundCI);
+            String experience = cursor.getString(experienceCI);
             String level = cursor.getString(levelCI);
             String alignment = cursor.getString(alignmentCI);
             String deity = cursor.getString(deityCI);
@@ -245,6 +457,12 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
             String hair = cursor.getString(hairCI);
             String eyes = cursor.getString(eyesCI);
             String skin = cursor.getString(skinCI);
+            String proficiency = cursor.getString(proficiencyCI);
+            String healthPoints = cursor.getString(healthPointsCI);
+            String temporaryHealthPoints = cursor.getString(temporaryHealthPointsCI);
+            String armorClass = cursor.getString(armorClassCI);
+            String spellcasting = cursor.getString(spellcastingClassCI);
+            String speed = cursor.getString(speedCI);
             String strength = cursor.getString(strCI);
             String dexterity = cursor.getString(dexCI);
             String constitution = cursor.getString(conCI);
@@ -270,9 +488,49 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
             String sleightOfHand = cursor.getString(sleightOfHandCI);
             String stealth = cursor.getString(stealthCI);
             String survival = cursor.getString(survivalCI);
+            String firstWeaponName = cursor.getString(firstWeaponNameCI);
+            String firstWeaponBonus = cursor.getString(firstWeaponBonusCI);
+            String firstWeaponDamage = cursor.getString(firstWeaponDamageCI);
+            firstDamage = cursor.getInt(firstWeaponDamageIdCI);
+            String firstWeaponType = cursor.getString(firstWeaponTypeCI);
+            String secondWeaponName = cursor.getString(secondWeaponNameCI);
+            String secondWeaponBonus = cursor.getString(secondWeaponBonusCI);
+            String secondWeaponDamage = cursor.getString(secondWeaponDamageCI);
+            secondDamage = cursor.getInt(secondWeaponDamageIdCI);
+            String secondWeaponType = cursor.getString(secondWeaponTypeCI);
+            String thirdWeaponName = cursor.getString(thirdWeaponNameCI);
+            String thirdWeaponBonus = cursor.getString(thirdWeaponBonusCI);
+            String thirdWeaponDamage = cursor.getString(thirdWeaponDamageCI);
+            thirdDamage = cursor.getInt(thirdWeaponDamageIdCI);
+            String thirdWeaponType = cursor.getString(thirdWeaponTypeCI);
+            String preparedSpells = cursor.getString(preparedSpellsCI);
+            String equipment = cursor.getString(equipmentCI);
+            String languages = cursor.getString(languagesCI);
+            String personality = cursor.getString(personalityCI);
+            String ideals = cursor.getString(idealsCI);
+            String bonds = cursor.getString(bondsCI);
+            String flaws = cursor.getString(flawsCI);
+            String allies = cursor.getString(alliesCI);
+            String backstory = cursor.getString(backstoryCI);
+            String spellcastingAbility = cursor.getString(spellcastingAbilityCI);
+            String spellSaveDC = cursor.getString(spellSaveDCCI);
+            String spellAttackBonus = cursor.getString(spellAttackBonusCI);
+            String levelZeroSpells = cursor.getString(levelZeroSpellsCI);
+            String levelOneSpells = cursor.getString(levelOneSpellsCI);
+            String levelTwoSpells = cursor.getString(levelTwoSpellsCI);
+            String levelThreeSpells = cursor.getString(levelThreeSpellsCI);
+            String levelFourSpells = cursor.getString(levelFourSpellsCI);
+            String levelFiveSpells = cursor.getString(levelFiveSpellsCI);
+            String levelSixSpells = cursor.getString(levelSixSpellsCI);
+            String levelSevenSpells = cursor.getString(levelSevenSpellsCI);
+            String levelEightSpells = cursor.getString(levelEightSpellsCI);
+            String levelNineSpells = cursor.getString(levelNineSpellsCI);
 
             mCharacterName.setText(name);
             mCharacterClass.setText(charClass);
+            mCharacterRace.setText(race);
+            mCharacterBackground.setText(background);
+            mCharacterXP.setText(experience);
             mCharacterLevel.setText(level);
             mCharacterAlignment.setText(alignment);
             mCharacterDeity.setText(deity);
@@ -282,6 +540,12 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
             mCharacterHair.setText(hair);
             mCharacterEyes.setText(eyes);
             mCharacterSkin.setText(skin);
+            mCharacterProficiency.setText(proficiency);
+            mCharacterHealthPoints.setText(healthPoints);
+            mCharacterTemporaryHealthPoints.setText(temporaryHealthPoints);
+            mCharacterArmorClass.setText(armorClass);
+            mCharacterSpellcastingClass.setText(spellcasting);
+            mCharacterSpeed.setText(speed);
             mCharacterStr.setText(strength);
             mCharacterDex.setText(dexterity);
             mCharacterCon.setText(constitution);
@@ -325,6 +589,40 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
             mCharacterSleightOfHand.setText(sleightOfHand);
             mCharacterStealth.setText(stealth);
             mCharacterSurvival.setText(survival);
+            mFirstWeaponName.setText(firstWeaponName);
+            mFirstWeaponBonus.setText(firstWeaponBonus);
+            mFirstWeaponDamage.setText(firstWeaponDamage);
+            mFirstWeaponType.setText(firstWeaponType);
+            mSecondWeaponName.setText(secondWeaponName);
+            mSecondWeaponBonus.setText(secondWeaponBonus);
+            mSecondWeaponDamage.setText(secondWeaponDamage);
+            mSecondWeaponType.setText(secondWeaponType);
+            mThirdWeaponName.setText(thirdWeaponName);
+            mThirdWeaponBonus.setText(thirdWeaponBonus);
+            mThirdWeaponDamage.setText(thirdWeaponDamage);
+            mThirdWeaponType.setText(thirdWeaponType);
+            mPreparedSpells.setText(preparedSpells);
+            mEquipment.setText(equipment);
+            mLanguages.setText(languages);
+            mPersonality.setText(personality);
+            mIdeals.setText(ideals);
+            mBonds.setText(bonds);
+            mFlaws.setText(flaws);
+            mAllies.setText(allies);
+            mBackstory.setText(backstory);
+            mSpellcastingAbility.setText(spellcastingAbility);
+            mSpellSaveDC.setText(spellSaveDC);
+            mSpellAttackBonus.setText(spellAttackBonus);
+            mLevelZeroSpells.setText(levelZeroSpells);
+            mLevelOneSpells.setText(levelOneSpells);
+            mLevelTwoSpells.setText(levelTwoSpells);
+            mLevelThreeSpells.setText(levelThreeSpells);
+            mLevelFourSpells.setText(levelFourSpells);
+            mLevelFiveSpells.setText(levelFiveSpells);
+            mLevelSixSpells.setText(levelSixSpells);
+            mLevelSevenSpells.setText(levelSevenSpells);
+            mLevelEightSpells.setText(levelEightSpells);
+            mLevelNineSpells.setText(levelNineSpells);
         }
 
         return;

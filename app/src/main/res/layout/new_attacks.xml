@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/weaponsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/weapons"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/nameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/name"
+        app:layout_constraintTop_toBottomOf="@id/weaponsView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bonusView"/>
+
+    <TextView
+        android:id="@+id/bonusView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/atk_bonus"
+        app:layout_constraintTop_toBottomOf="@id/weaponsView"
+        app:layout_constraintStart_toEndOf="@id/nameView"
+        app:layout_constraintEnd_toStartOf="@id/damageView"/>
+
+    <TextView
+        android:id="@+id/damageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/damage"
+        app:layout_constraintTop_toBottomOf="@id/weaponsView"
+        app:layout_constraintEnd_toStartOf="@id/typeView"
+        app:layout_constraintStart_toEndOf="@id/bonusView" />
+
+    <TextView
+        android:id="@+id/typeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/damage_type"
+        app:layout_constraintTop_toBottomOf="@id/weaponsView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/damageView" />
+
+    <EditText
+        android:id="@+id/editFirstNameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/nameView"
+        app:layout_constraintEnd_toEndOf="@id/nameView"
+        app:layout_constraintStart_toStartOf="@id/nameView" />
+
+    <EditText
+        android:id="@+id/editFirstBonusView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/bonusView"
+        app:layout_constraintEnd_toEndOf="@id/bonusView"
+        app:layout_constraintStart_toStartOf="@id/bonusView" />
+
+    <Spinner
+        android:id="@+id/editFirstDamageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/damageView"
+        app:layout_constraintEnd_toEndOf="@id/damageView"
+        app:layout_constraintStart_toStartOf="@id/damageView"
+        app:layout_constraintBottom_toTopOf="@+id/editSecondDamageView" />
+
+    <EditText
+        android:id="@+id/editFirstTypeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/typeView"
+        app:layout_constraintEnd_toEndOf="@id/typeView"
+        app:layout_constraintStart_toStartOf="@id/typeView" />
+
+    <EditText
+        android:id="@+id/editSecondNameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstNameView"
+        app:layout_constraintEnd_toEndOf="@id/nameView"
+        app:layout_constraintStart_toStartOf="@id/nameView" />
+
+    <EditText
+        android:id="@+id/editSecondBonusView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstBonusView"
+        app:layout_constraintEnd_toEndOf="@id/bonusView"
+        app:layout_constraintStart_toStartOf="@id/bonusView" />
+
+    <Spinner
+        android:id="@+id/editSecondDamageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstDamageView"
+        app:layout_constraintEnd_toEndOf="@id/damageView"
+        app:layout_constraintStart_toStartOf="@id/damageView"
+        app:layout_constraintBottom_toTopOf="@+id/editThirdDamageView" />
+
+    <EditText
+        android:id="@+id/editSecondTypeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstTypeView"
+        app:layout_constraintEnd_toEndOf="@id/typeView"
+        app:layout_constraintStart_toStartOf="@id/typeView" />
+
+    <EditText
+        android:id="@+id/editThirdNameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/editSecondNameView"
+        app:layout_constraintEnd_toEndOf="@id/nameView"
+        app:layout_constraintStart_toStartOf="@id/nameView" />
+
+    <EditText
+        android:id="@+id/editThirdBonusView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/editSecondBonusView"
+        app:layout_constraintEnd_toEndOf="@id/bonusView"
+        app:layout_constraintStart_toStartOf="@id/bonusView" />
+
+    <Spinner
+        android:id="@+id/editThirdDamageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/editSecondDamageView"
+        app:layout_constraintEnd_toEndOf="@id/damageView"
+        app:layout_constraintStart_toStartOf="@id/damageView"
+        app:layout_constraintBottom_toTopOf="@+id/preparedSpellsView" />
+
+    <EditText
+        android:id="@+id/editThirdTypeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/editSecondTypeView"
+        app:layout_constraintEnd_toEndOf="@id/typeView"
+        app:layout_constraintStart_toStartOf="@id/typeView" />
+
+    <TextView
+        android:id="@+id/preparedSpellsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/prepared_spells"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/editThirdBonusView"/>
+
+    <EditText
+        android:id="@+id/editPreparedSpellsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine|textCapSentences"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/preparedSpellsView"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/weaponsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/weapons"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/nameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/name"
+        app:layout_constraintTop_toBottomOf="@id/weaponsView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bonusView"/>
+
+    <TextView
+        android:id="@+id/bonusView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/atk_bonus"
+        app:layout_constraintTop_toBottomOf="@id/weaponsView"
+        app:layout_constraintStart_toEndOf="@id/nameView"
+        app:layout_constraintEnd_toStartOf="@id/damageView"/>
+
+    <TextView
+        android:id="@+id/damageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/damage"
+        app:layout_constraintTop_toBottomOf="@id/weaponsView"
+        app:layout_constraintEnd_toStartOf="@id/typeView"
+        app:layout_constraintStart_toEndOf="@id/bonusView" />
+
+    <TextView
+        android:id="@+id/typeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/damage_type"
+        app:layout_constraintTop_toBottomOf="@id/weaponsView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/damageView" />
+
+    <TextView
+        android:id="@+id/viewFirstNameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/nameView"
+        app:layout_constraintEnd_toEndOf="@id/nameView"
+        app:layout_constraintStart_toStartOf="@id/nameView" />
+
+    <TextView
+        android:id="@+id/viewFirstBonusView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/bonusView"
+        app:layout_constraintEnd_toEndOf="@id/bonusView"
+        app:layout_constraintStart_toStartOf="@id/bonusView" />
+
+    <TextView
+        android:id="@+id/viewFirstDamageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/damageView"
+        app:layout_constraintEnd_toEndOf="@id/damageView"
+        app:layout_constraintStart_toStartOf="@id/damageView" />
+
+    <TextView
+        android:id="@+id/viewFirstTypeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/typeView"
+        app:layout_constraintEnd_toEndOf="@id/typeView"
+        app:layout_constraintStart_toStartOf="@id/typeView" />
+
+    <TextView
+        android:id="@+id/viewSecondNameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewFirstNameView"
+        app:layout_constraintEnd_toEndOf="@id/nameView"
+        app:layout_constraintStart_toStartOf="@id/nameView" />
+
+    <TextView
+        android:id="@+id/viewSecondBonusView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewFirstBonusView"
+        app:layout_constraintEnd_toEndOf="@id/bonusView"
+        app:layout_constraintStart_toStartOf="@id/bonusView" />
+
+    <TextView
+        android:id="@+id/viewSecondDamageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewFirstDamageView"
+        app:layout_constraintEnd_toEndOf="@id/damageView"
+        app:layout_constraintStart_toStartOf="@id/damageView" />
+
+    <TextView
+        android:id="@+id/viewSecondTypeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewFirstTypeView"
+        app:layout_constraintEnd_toEndOf="@id/typeView"
+        app:layout_constraintStart_toStartOf="@id/typeView" />
+
+    <TextView
+        android:id="@+id/viewThirdNameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewSecondNameView"
+        app:layout_constraintEnd_toEndOf="@id/nameView"
+        app:layout_constraintStart_toStartOf="@id/nameView" />
+
+    <TextView
+        android:id="@+id/viewThirdBonusView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewSecondBonusView"
+        app:layout_constraintEnd_toEndOf="@id/bonusView"
+        app:layout_constraintStart_toStartOf="@id/bonusView" />
+
+    <TextView
+        android:id="@+id/viewThirdDamageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewSecondDamageView"
+        app:layout_constraintEnd_toEndOf="@id/damageView"
+        app:layout_constraintStart_toStartOf="@id/damageView" />
+
+    <TextView
+        android:id="@+id/viewThirdTypeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewSecondTypeView"
+        app:layout_constraintEnd_toEndOf="@id/typeView"
+        app:layout_constraintStart_toStartOf="@id/typeView" />
+
+    <TextView
+        android:id="@+id/preparedSpellsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/prepared_spells"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/viewThirdBonusView"/>
+
+    <TextView
+        android:id="@+id/viewPreparedSpellsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/preparedSpellsView"/>
+</android.support.constraint.ConstraintLayout>

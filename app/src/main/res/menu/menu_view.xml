@@ -3,6 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/make_skill_rolls"
+        android:title="@string/make_skill_rolls"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/make_saving_rolls"
+        android:title="@string/make_saving_rolls"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/make_attack_rolls"
+        android:title="@string/make_attack_rolls"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/make_custom_rolls"
+        android:title="@string/make_custom_rolls"
+        app:showAsAction="never"/>
+
+    <item
         android:id="@+id/edit_character"
         android:title="@string/edit_character"
         app:showAsAction="never"/>

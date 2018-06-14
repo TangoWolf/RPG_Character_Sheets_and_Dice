@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/d_four_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/d_four_button"
+            app:layout_constraintEnd_toStartOf="@id/d_four_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/d_four_button" />
+
+        <TextView
+            android:id="@+id/d_four_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d_four"
+            app:layout_constraintTop_toTopOf="@id/d_four_button"
+            app:layout_constraintStart_toEndOf="@id/d_four_spinner"
+            app:layout_constraintEnd_toStartOf="@id/d_four_button"
+            app:layout_constraintBottom_toBottomOf="@id/d_four_button" />
+
+        <Button
+            android:id="@+id/d_four_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/roll"
+            android:onClick="dFourRoll"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/d_four_textview"
+            app:layout_constraintEnd_toStartOf="@id/d_four_roll"
+            app:layout_constraintBottom_toTopOf="@id/d_six_button"/>
+
+        <TextView
+            android:id="@+id/d_four_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/d_four_button"
+            app:layout_constraintStart_toEndOf="@id/d_four_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/d_four_button"/>
+
+        <Spinner
+            android:id="@+id/d_six_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/d_six_button"
+            app:layout_constraintEnd_toStartOf="@id/d_six_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/d_six_button" />
+
+        <TextView
+            android:id="@+id/d_six_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d_six"
+            app:layout_constraintTop_toTopOf="@id/d_six_button"
+            app:layout_constraintStart_toEndOf="@id/d_six_spinner"
+            app:layout_constraintEnd_toStartOf="@id/d_six_button"
+            app:layout_constraintBottom_toBottomOf="@id/d_six_button" />
+
+        <Button
+            android:id="@+id/d_six_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/roll"
+            android:onClick="dSixRoll"
+            app:layout_constraintTop_toBottomOf="@id/d_four_button"
+            app:layout_constraintStart_toEndOf="@id/d_six_textview"
+            app:layout_constraintEnd_toStartOf="@id/d_six_roll"
+            app:layout_constraintBottom_toTopOf="@id/d_eight_button"/>
+
+        <TextView
+            android:id="@+id/d_six_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/d_six_button"
+            app:layout_constraintStart_toEndOf="@id/d_six_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/d_six_button"/>
+
+        <Spinner
+            android:id="@+id/d_eight_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/d_eight_button"
+            app:layout_constraintEnd_toStartOf="@id/d_eight_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/d_eight_button" />
+
+        <TextView
+            android:id="@+id/d_eight_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d_eight"
+            app:layout_constraintTop_toTopOf="@id/d_eight_button"
+            app:layout_constraintStart_toEndOf="@id/d_eight_spinner"
+            app:layout_constraintEnd_toStartOf="@id/d_eight_button"
+            app:layout_constraintBottom_toBottomOf="@id/d_eight_button" />
+
+        <Button
+            android:id="@+id/d_eight_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/roll"
+            android:onClick="dEightRoll"
+            app:layout_constraintTop_toBottomOf="@id/d_six_button"
+            app:layout_constraintStart_toEndOf="@id/d_eight_textview"
+            app:layout_constraintEnd_toStartOf="@id/d_eight_roll"
+            app:layout_constraintBottom_toTopOf="@id/d_ten_button"/>
+
+        <TextView
+            android:id="@+id/d_eight_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/d_eight_button"
+            app:layout_constraintStart_toEndOf="@id/d_eight_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/d_eight_button"/>
+
+        <Spinner
+            android:id="@+id/d_ten_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/d_ten_button"
+            app:layout_constraintEnd_toStartOf="@id/d_ten_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/d_ten_button" />
+
+        <TextView
+            android:id="@+id/d_ten_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d_ten"
+            app:layout_constraintTop_toTopOf="@id/d_ten_button"
+            app:layout_constraintStart_toEndOf="@id/d_ten_spinner"
+            app:layout_constraintEnd_toStartOf="@id/d_ten_button"
+            app:layout_constraintBottom_toBottomOf="@id/d_ten_button" />
+
+        <Button
+            android:id="@+id/d_ten_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/roll"
+            android:onClick="dTenRoll"
+            app:layout_constraintTop_toBottomOf="@id/d_eight_button"
+            app:layout_constraintStart_toEndOf="@id/d_ten_textview"
+            app:layout_constraintEnd_toStartOf="@id/d_ten_roll"
+            app:layout_constraintBottom_toTopOf="@id/d_twelve_button"/>
+
+        <TextView
+            android:id="@+id/d_ten_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/d_ten_button"
+            app:layout_constraintStart_toEndOf="@id/d_ten_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/d_ten_button"/>
+
+        <Spinner
+            android:id="@+id/d_twelve_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/d_twelve_button"
+            app:layout_constraintEnd_toStartOf="@id/d_twelve_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/d_twelve_button" />
+
+        <TextView
+            android:id="@+id/d_twelve_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d_twelve"
+            app:layout_constraintTop_toTopOf="@id/d_twelve_button"
+            app:layout_constraintStart_toEndOf="@id/d_twelve_spinner"
+            app:layout_constraintEnd_toStartOf="@id/d_twelve_button"
+            app:layout_constraintBottom_toBottomOf="@id/d_twelve_button" />
+
+        <Button
+            android:id="@+id/d_twelve_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/roll"
+            android:onClick="dTwelveRoll"
+            app:layout_constraintTop_toBottomOf="@id/d_ten_button"
+            app:layout_constraintStart_toEndOf="@id/d_twelve_textview"
+            app:layout_constraintEnd_toStartOf="@id/d_twelve_roll"
+            app:layout_constraintBottom_toTopOf="@id/d_twenty_button"/>
+
+        <TextView
+            android:id="@+id/d_twelve_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/d_twelve_button"
+            app:layout_constraintStart_toEndOf="@id/d_twelve_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/d_twelve_button"/>
+
+        <Spinner
+            android:id="@+id/d_twenty_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/d_twenty_button"
+            app:layout_constraintEnd_toEndOf="@id/d_twenty_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/d_twenty_button" />
+
+        <TextView
+            android:id="@+id/d_twenty_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d_twenty"
+            app:layout_constraintTop_toTopOf="@id/d_twenty_button"
+            app:layout_constraintStart_toEndOf="@id/d_twenty_spinner"
+            app:layout_constraintEnd_toStartOf="@id/d_twenty_button"
+            app:layout_constraintBottom_toBottomOf="@id/d_twenty_button" />
+
+        <Button
+            android:id="@+id/d_twenty_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/roll"
+            android:onClick="dTwentyRoll"
+            app:layout_constraintTop_toBottomOf="@id/d_twelve_button"
+            app:layout_constraintStart_toEndOf="@id/d_twenty_textview"
+            app:layout_constraintEnd_toStartOf="@id/d_twenty_roll"
+            app:layout_constraintBottom_toTopOf="@id/d_hundred_button"/>
+
+        <TextView
+            android:id="@+id/d_twenty_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/d_twenty_button"
+            app:layout_constraintStart_toEndOf="@id/d_twenty_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/d_twenty_button"/>
+
+        <Spinner
+            android:id="@+id/d_hundred_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/d_hundred_button"
+            app:layout_constraintEnd_toStartOf="@id/d_hundred_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/d_hundred_button" />
+
+        <TextView
+            android:id="@+id/d_hundred_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d_hundred"
+            app:layout_constraintTop_toTopOf="@id/d_hundred_button"
+            app:layout_constraintStart_toEndOf="@id/d_hundred_spinner"
+            app:layout_constraintEnd_toStartOf="@id/d_hundred_button"
+            app:layout_constraintBottom_toBottomOf="@id/d_hundred_button" />
+
+        <Button
+            android:id="@+id/d_hundred_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/roll"
+            android:onClick="dHundredRoll"
+            app:layout_constraintTop_toBottomOf="@id/d_twenty_button"
+            app:layout_constraintStart_toEndOf="@id/d_hundred_textview"
+            app:layout_constraintEnd_toStartOf="@id/d_hundred_roll"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/d_hundred_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/d_hundred_button"
+            app:layout_constraintStart_toEndOf="@id/d_hundred_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/d_hundred_button"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

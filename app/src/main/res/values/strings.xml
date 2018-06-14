@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">RPG Character sheets and Dice</string>
+    <string name="no_character">No Characters</string>
 
     <string name="character_name">Character Name</string>
     <string name="character_class">Character Class</string>
     <string name="feats">Features and Traits</string>
+
+    <string name="character_race">Character Race</string>
+    <string name="character_background">Character Background</string>
+    <string name="character_experience">Character Experience</string>
 
     <string name="character_level">Character Level</string>
     <string name="character_alignment">Character Alignment</string>
@@ -16,6 +21,14 @@
     <string name="character_hair">Character Hair</string>
     <string name="character_eyes">Character Eyes</string>
     <string name="character_skin">Character Skin</string>
+
+    <string name="character_proficiency">Proficiency Bonus</string>
+    <string name="character_health_points">Health Points</string>
+    <string name="character_temporary_health_points">Temporary Health Points</string>
+
+    <string name="character_ac">Armor Class</string>
+    <string name="spellcasting_class">Spellcasting Class</string>
+    <string name="character_speed">Speed</string>
 
     <string name="attributes">Attributes</string>
     <string name="strength">Strength</string>
@@ -48,17 +61,133 @@
     <string name="stealth">Stealth</string>
     <string name="survival">Survival</string>
 
+    <string name="attacks_and_spellcasting">Attacks and Spellcasting</string>
+    <string name="weapons">Weapons</string>
+    <string name="prepared_spells">Prepared Spells</string>
+    <string name="name">Name</string>
+    <string name="atk_bonus">ATK Bonus</string>
+    <string name="damage">Damage</string>
+    <string name="damage_type">Type</string>
+
+    <string name="equipment">Equpiment and Treasure</string>
+    <string name="languages">Other Proficiencies and Languages</string>
+    <string name="personality">Personality Traits</string>
+    <string name="ideals">Ideals</string>
+    <string name="bonds">Bonds</string>
+    <string name="flaws">Flaws</string>
+    <string name="allies">Allies and Organizations</string>
+    <string name="backstory">Backstory</string>
+
+    <string name="spellcasting_ability">Spellcasting Ability</string>
+    <string name="spell_save_dc">Spell Save DC</string>
+    <string name="spell_attack_bonus">Spell Attack Bonus</string>
+
+    <string name="level_0_spells">Level 0 spells (Cantrips)</string>
+    <string name="level_1_spells">Level 1 spells</string>
+    <string name="level_2_spells">Level 2 spells</string>
+    <string name="level_3_spells">Level 3 spells</string>
+    <string name="level_4_spells">Level 4 spells</string>
+    <string name="level_5_spells">Level 5 spells</string>
+    <string name="level_6_spells">Level 6 spells</string>
+    <string name="level_7_spells">Level 7 spells</string>
+    <string name="level_8_spells">Level 8 spells</string>
+    <string name="level_9_spells">Level 9 spells</string>
+
     <string name="available_characters">Available Characters</string>
     <string name="edit_character">Edit Character</string>
     <string name="new_character">New Character</string>
     <string name="view_character">View Character</string>
+    <string name="skill_roll">Skill Rolls</string>
+    <string name="attribute_roll">Saving Rolls</string>
+    <string name="attack_roll">Attack Rolls</string>
+    <string name="custom_roll">Custom Rolls</string>
 
     <string name="create_new_character">Create New Character</string>
     <string name="save_changes">Save Changes</string>
     <string name="discard_changes">Discard Changes</string>
     <string name="delete_character">Delete Character</string>
+    <string name="make_skill_rolls">Make Skill Roll</string>
+    <string name="make_saving_rolls">Make Saving Roll</string>
+    <string name="make_attack_rolls">Make Attack Roll</string>
+    <string name="make_custom_rolls">Make Custom Roll</string>
 
     <string name="delete_dialog_msg">Delete Character?</string>
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
+
+    <string name="acrobatics_roll">Acrobatics mod + 1d20 = </string>
+    <string name="animal_handling_roll">Animal handling mod + 1d20 = </string>
+    <string name="arcana_roll">Arcana mod + 1d20 = </string>
+    <string name="athletics_roll">Athletics mod + 1d20 = </string>
+    <string name="deception_roll">Deception mod + 1d20 = </string>
+    <string name="history_roll">History mod + 1d20 = </string>
+    <string name="insight_roll">Insight mod + 1d20 = </string>
+    <string name="intimidation_roll">Intimidation mod + 1d20 = </string>
+    <string name="investigation_roll">Investigation mod + 1d20 = </string>
+    <string name="medicine_roll">Medicine mod + 1d20 = </string>
+    <string name="nature_roll">Nature mod + 1d20 = </string>
+    <string name="perception_roll">Perception mod + 1d20 = </string>
+    <string name="performance_roll">Performance mod + 1d20 = </string>
+    <string name="persuasion_roll">Persuasion mod + 1d20 = </string>
+    <string name="religion_roll">Religion mod + 1d20 = </string>
+    <string name="sleight_of_hand_roll">Sleight of hand mod + 1d20 = </string>
+    <string name="stealth_roll">Stealth mod + 1d20 = </string>
+    <string name="survival_roll">Survival mod + 1d20 = </string>
+    <string name="acrobatics_button">Acrobatics</string>
+    <string name="animal_handling_button">Animal Handling</string>
+    <string name="arcana_button">Arcana</string>
+    <string name="athletics_button">Athletics</string>
+    <string name="deception_button">Deception</string>
+    <string name="history_button">History</string>
+    <string name="insight_button">Insight</string>
+    <string name="intimidation_button">Intimidation</string>
+    <string name="investigation_button">Investigation</string>
+    <string name="medicine_button">Medicine</string>
+    <string name="nature_button">Nature</string>
+    <string name="perception_button">Perception</string>
+    <string name="performance_button">Performance</string>
+    <string name="persuasion_button">Persuasion</string>
+    <string name="religion_button">Religion</string>
+    <string name="sleight_of_hand_button">Sleight Of Hand</string>
+    <string name="stealth_button">Stealth</string>
+    <string name="survival_button">Survival</string>
+
+    <string name="strength_roll">Strength mod + 1d20 = </string>
+    <string name="dexterity_roll">Dexterity mod + 1d20 = </string>
+    <string name="constitution_roll">Constitution mod + 1d20 = </string>
+    <string name="intelligence_roll">Intelligence mod + 1d20 = </string>
+    <string name="wisdom_roll">Wisdom mod + 1d20 = </string>
+    <string name="charisma_roll">Charisma mod + 1d20 = </string>
+    <string name="strength_button">Strength</string>
+    <string name="dexterity_button">Dexterity</string>
+    <string name="constitution_button">Constitution</string>
+    <string name="intelligence_button">Intelligence</string>
+    <string name="wisdom_button">Wisdom</string>
+    <string name="charisma_button">Charisma</string>
+
+    <string name="first_weapon_roll">Attack Bonus + 1d20 = </string>
+    <string name="second_weapon_roll">Attack Bonus + 1d20 = </string>
+    <string name="third_weapon_roll">Attack Bonus + 1d20 = </string>
+    <string name="first_weapon_button">First Weapon</string>
+    <string name="second_weapon_button">Second Weapon</string>
+    <string name="third_weapon_button">Third Weapon</string>
+    <string name="first_damage_button">Roll damage for First Weapon</string>
+    <string name="second_damage_button">Roll damage for Second Weapon</string>
+    <string name="third_damage_button">Roll damage for Third Weapon</string>
+    <string name="roll_damage">Roll damage for</string>
+    <string name="no_damage_dice">No damage selected for weapon!</string>
+
+    <string name="d_four">d4s</string>
+    <string name="d_six">d6s</string>
+    <string name="d_eight">d8s</string>
+    <string name="d_ten">d10s</string>
+    <string name="d_twelve">d12s</string>
+    <string name="d_twenty">d20s</string>
+    <string name="d_hundred">d100s</string>
+    <string name="roll">Roll!</string>
+    <string name="no_dice">No dice selected!</string>
+    <string name="title_activity_maps">Gaming Shop Search</string>
+
+    <string name="current_location">Current Location</string>
+    <string name="no_location">No location data found</string>
 </resources>

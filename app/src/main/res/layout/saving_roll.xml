@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/strength_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/strength_button"
+            android:onClick="strengthRoll"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/strength_textview"
+            app:layout_constraintBottom_toTopOf="@id/dexterity_button"/>
+
+        <TextView
+            android:id="@+id/strength_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strength_roll"
+            app:layout_constraintTop_toTopOf="@id/strength_button"
+            app:layout_constraintStart_toEndOf="@id/strength_button"
+            app:layout_constraintEnd_toStartOf="@id/strength_roll"
+            app:layout_constraintBottom_toBottomOf="@id/strength_button"/>
+
+        <TextView
+            android:id="@+id/strength_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/strength_button"
+            app:layout_constraintStart_toEndOf="@id/strength_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/strength_button" />
+
+        <Button
+            android:id="@+id/dexterity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/dexterity_button"
+            android:onClick="dexterityRoll"
+            app:layout_constraintTop_toBottomOf="@id/strength_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dexterity_textview"
+            app:layout_constraintBottom_toTopOf="@id/constitution_button"/>
+
+        <TextView
+            android:id="@+id/dexterity_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dexterity_roll"
+            app:layout_constraintTop_toTopOf="@id/dexterity_button"
+            app:layout_constraintStart_toEndOf="@id/dexterity_button"
+            app:layout_constraintEnd_toStartOf="@id/dexterity_roll"
+            app:layout_constraintBottom_toBottomOf="@id/dexterity_button"/>
+
+        <TextView
+            android:id="@+id/dexterity_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/dexterity_button"
+            app:layout_constraintStart_toEndOf="@id/dexterity_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/dexterity_button" />
+
+        <Button
+            android:id="@+id/constitution_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/constitution_button"
+            android:onClick="constitutionRoll"
+            app:layout_constraintTop_toBottomOf="@id/dexterity_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/constitution_textview"
+            app:layout_constraintBottom_toTopOf="@id/intelligence_button"/>
+
+        <TextView
+            android:id="@+id/constitution_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/constitution_roll"
+            app:layout_constraintTop_toTopOf="@id/constitution_button"
+            app:layout_constraintStart_toEndOf="@id/constitution_button"
+            app:layout_constraintEnd_toStartOf="@id/constitution_roll"
+            app:layout_constraintBottom_toBottomOf="@id/constitution_button"/>
+
+        <TextView
+            android:id="@+id/constitution_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/constitution_button"
+            app:layout_constraintStart_toEndOf="@id/constitution_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/constitution_button" />
+
+        <Button
+            android:id="@+id/intelligence_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/intelligence_button"
+            android:onClick="intelligenceRoll"
+            app:layout_constraintTop_toBottomOf="@id/constitution_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/intelligence_textview"
+            app:layout_constraintBottom_toTopOf="@id/wisdom_button"/>
+
+        <TextView
+            android:id="@+id/intelligence_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intelligence_roll"
+            app:layout_constraintTop_toTopOf="@id/intelligence_button"
+            app:layout_constraintStart_toEndOf="@id/intelligence_button"
+            app:layout_constraintEnd_toStartOf="@id/intelligence_roll"
+            app:layout_constraintBottom_toBottomOf="@id/intelligence_button"/>
+
+        <TextView
+            android:id="@+id/intelligence_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/intelligence_button"
+            app:layout_constraintStart_toEndOf="@id/intelligence_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/intelligence_button" />
+
+        <Button
+            android:id="@+id/wisdom_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/wisdom_button"
+            android:onClick="wisdomRoll"
+            app:layout_constraintTop_toBottomOf="@id/intelligence_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/wisdom_textview"
+            app:layout_constraintBottom_toTopOf="@id/charisma_button"/>
+
+        <TextView
+            android:id="@+id/wisdom_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wisdom_roll"
+            app:layout_constraintTop_toTopOf="@id/wisdom_button"
+            app:layout_constraintStart_toEndOf="@id/wisdom_button"
+            app:layout_constraintEnd_toStartOf="@id/wisdom_roll"
+            app:layout_constraintBottom_toBottomOf="@id/wisdom_button"/>
+
+        <TextView
+            android:id="@+id/wisdom_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/wisdom_button"
+            app:layout_constraintStart_toEndOf="@id/wisdom_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/wisdom_button" />
+
+        <Button
+            android:id="@+id/charisma_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/charisma_button"
+            android:onClick="charismaRoll"
+            app:layout_constraintTop_toBottomOf="@id/wisdom_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/charisma_textview"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/charisma_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/charisma_roll"
+            app:layout_constraintTop_toTopOf="@id/charisma_button"
+            app:layout_constraintStart_toEndOf="@id/charisma_button"
+            app:layout_constraintEnd_toStartOf="@id/charisma_roll"
+            app:layout_constraintBottom_toBottomOf="@id/charisma_button"/>
+
+        <TextView
+            android:id="@+id/charisma_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/charisma_button"
+            app:layout_constraintStart_toEndOf="@id/charisma_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/charisma_button" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

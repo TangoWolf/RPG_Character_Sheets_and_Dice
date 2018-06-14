@@ -46,11 +46,19 @@
             android:inputType="textCapWords"/>
 
         <include
+            layout="@layout/new_rabaex"
+            android:id="@+id/rabaex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/classView"
+            android:layout_marginTop="16dp"/>
+
+        <include
             layout="@layout/new_lealde"
             android:id="@+id/lealde"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/classView"
+            android:layout_below="@id/rabaex"
             android:layout_marginTop="16dp"/>
 
         <include
@@ -70,11 +78,27 @@
             android:layout_marginTop="16dp"/>
 
         <include
+            layout="@layout/new_prhpch"
+            android:id="@+id/prhpch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/haeysk"
+            android:layout_marginTop="16dp"/>
+
+        <include
+            layout="@layout/new_acinsp"
+            android:id="@+id/acinsp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prhpch"
+            android:layout_marginTop="16dp"/>
+
+        <include
             layout="@layout/new_attributes"
             android:id="@+id/attributes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/haeysk"
+            android:layout_below="@id/acinsp"
             android:layout_marginTop="16dp"/>
 
         <TextView
@@ -102,5 +126,354 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/editFeatsView"
             android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/attacksAndSpellcastingView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/attacks_and_spellcasting"
+            android:layout_below="@id/skills"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <include
+            layout="@layout/new_attacks"
+            android:id="@+id/attacks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/attacksAndSpellcastingView"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/equipmentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/equipment"
+            android:layout_below="@id/attacks"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editEquipmentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/equipmentView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/languagesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/languages"
+            android:layout_below="@id/editEquipmentView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLanguagesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/languagesView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/personalityView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/personality"
+            android:layout_below="@id/editLanguagesView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editPersonalityView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/personalityView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/idealsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ideals"
+            android:layout_below="@id/editPersonalityView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editIdealsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/idealsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/bondsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bonds"
+            android:layout_below="@id/editIdealsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editBondsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/bondsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/flawsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flaws"
+            android:layout_below="@id/editBondsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editFlawsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/flawsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/alliesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/allies"
+            android:layout_below="@id/editFlawsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editAlliesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/alliesView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/backstoryView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/backstory"
+            android:layout_below="@id/editAlliesView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editBackstoryView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/backstoryView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <include
+            layout="@layout/new_spells"
+            android:id="@+id/spells"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editBackstoryView"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/levelZeroSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_0_spells"
+            android:layout_below="@id/spells"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelZeroSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelZeroSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelOneSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_1_spells"
+            android:layout_below="@id/editLevelZeroSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelOneSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelOneSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelTwoSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_2_spells"
+            android:layout_below="@id/editLevelOneSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelTwoSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelTwoSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelThreeSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_3_spells"
+            android:layout_below="@id/editLevelTwoSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelThreeSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelThreeSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelFourSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_4_spells"
+            android:layout_below="@id/editLevelThreeSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelFourSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelFourSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelFiveSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_5_spells"
+            android:layout_below="@id/editLevelFourSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelFiveSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelFiveSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelSixSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_6_spells"
+            android:layout_below="@id/editLevelFiveSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelSixSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelSixSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelSevenSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_7_spells"
+            android:layout_below="@id/editLevelSixSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelSevenSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelSevenSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelEightSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_8_spells"
+            android:layout_below="@id/editLevelSevenSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelEightSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelEightSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/levelNineSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_9_spells"
+            android:layout_below="@id/editLevelEightSpellsView"
+            android:paddingTop="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLevelNineSpellsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_below="@id/levelNineSpellsView"
+            android:textSize="14sp"
+            android:gravity="center"/>
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
