@@ -14,11 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.shaol.char_sheet.Widget.Widget;
 import com.example.shaol.char_sheet.data.CharacterContract.CharacterEntry;
 
 import butterknife.BindView;
@@ -31,6 +34,8 @@ import butterknife.ButterKnife;
 public class ViewCharActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
     private Uri mCurrentCharacterUri;
     private static String[] attributez;
+
+    private static String mName;
 
     private static int firstDamage;
     private static int secondDamage;
@@ -121,6 +126,8 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
     @BindView(R.id.viewLevelSevenSpellsView) TextView mLevelSevenSpells;
     @BindView(R.id.viewLevelEightSpellsView) TextView mLevelEightSpells;
     @BindView(R.id.viewLevelNineSpellsView) TextView mLevelNineSpells;
+    @BindView(R.id.character_button_create) Button mSetWidget;
+    @BindView(R.id.character_button_destroy) Button mClearWidget;
 
     private static final int EXISTING_CHARACTER_LOADER = 0;
 
@@ -136,6 +143,9 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
         ButterKnife.bind(this);
 
         getSupportLoaderManager().initLoader(EXISTING_CHARACTER_LOADER, null, this);
+
+        mSetWidget.setOnClickListener(new MyClickListener());
+        mClearWidget.setOnClickListener(new OtherClickListener());
     }
 
     @Override
@@ -444,6 +454,7 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
             int levelNineSpellsCI = cursor.getColumnIndex(CharacterEntry.COLUMN_CHARACTER_LEVELNINESPELLS);
 
             String name = cursor.getString(nameCI);
+            mName = name;
             String charClass = cursor.getString(classCI);
             String race = cursor.getString(raceCI);
             String background = cursor.getString(backgroundCI);
@@ -712,5 +723,32 @@ public class ViewCharActivity extends AppCompatActivity implements LoaderManager
         }
 
         return modifiers;
+    }
+
+    public class MyClickListener implements View.OnClickListener {
+
+        public MyClickListener(){
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(ViewCharActivity.this, Widget.class);
+            intent.setAction(Widget.UPDATE_ACTION);
+            intent.putExtra("Name", mName);
+            sendBroadcast(intent);
+        }
+    }
+
+    public class OtherClickListener implements View.OnClickListener {
+
+        public OtherClickListener() {
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(ViewCharActivity.this, Widget.class);
+            intent.setAction(Widget.CLEAR_ACTION);
+            sendBroadcast(intent);
+        }
     }
 }

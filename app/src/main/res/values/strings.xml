@@ -190,4 +190,11 @@
 
     <string name="current_location">Current Location</string>
     <string name="no_location">No location data found</string>
+
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="widget_emptyView_text">No character selected</string>
+    <string name="widget_button_create">Set character to widget</string>
+    <string name="widget_button_destroy">Clear character from widget</string>
 </resources>

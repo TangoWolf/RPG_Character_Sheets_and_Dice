@@ -126,6 +126,8 @@ public class EditCharActivity extends AppCompatActivity implements LoaderManager
         setContentView(R.layout.activity_editchar);
         setTitle(getString(R.string.edit_character));
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Intent intent = getIntent();
         mCurrentCharacterUri = intent.getData();
 

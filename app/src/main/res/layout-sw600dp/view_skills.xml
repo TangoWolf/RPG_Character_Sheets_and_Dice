@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/skillsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/skills"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/acrobatics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/acrobatics"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/arcana"
+        app:layout_constraintEnd_toStartOf="@id/viewAcrobatics"/>
+
+    <TextView
+        android:id="@+id/arcana"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/arcana"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/acrobatics"
+        app:layout_constraintBottom_toTopOf="@id/deception"
+        app:layout_constraintEnd_toStartOf="@id/viewArcana" />
+
+    <TextView
+        android:id="@+id/deception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/deception"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/arcana"
+        app:layout_constraintBottom_toTopOf="@id/insight"
+        app:layout_constraintEnd_toStartOf="@id/viewDeception" />
+
+    <TextView
+        android:id="@+id/insight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/insight"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deception"
+        app:layout_constraintBottom_toTopOf="@id/investigation"
+        app:layout_constraintEnd_toStartOf="@id/viewInsight"/>
+
+    <TextView
+        android:id="@+id/investigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/investigation"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/insight"
+        app:layout_constraintBottom_toTopOf="@id/nature"
+        app:layout_constraintEnd_toStartOf="@id/viewInvestigation" />
+
+    <TextView
+        android:id="@+id/nature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/nature"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/investigation"
+        app:layout_constraintBottom_toTopOf="@id/performance"
+        app:layout_constraintEnd_toStartOf="@id/viewNature" />
+
+    <TextView
+        android:id="@+id/performance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/performance"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nature"
+        app:layout_constraintBottom_toTopOf="@id/religion"
+        app:layout_constraintEnd_toStartOf="@id/viewPerformance" />
+
+    <TextView
+        android:id="@+id/religion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/religion"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/performance"
+        app:layout_constraintBottom_toTopOf="@id/stealth"
+        app:layout_constraintEnd_toStartOf="@id/viewReligion" />
+
+    <TextView
+        android:id="@+id/stealth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stealth"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/religion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/viewStealth" />
+
+    <TextView
+        android:id="@+id/viewAcrobatics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsView"
+        app:layout_constraintStart_toEndOf="@id/acrobatics"
+        app:layout_constraintEnd_toStartOf="@id/animalHandling"
+        app:layout_constraintBottom_toTopOf="@id/viewArcana" />
+
+    <TextView
+        android:id="@+id/viewArcana"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewAcrobatics"
+        app:layout_constraintStart_toEndOf="@id/arcana"
+        app:layout_constraintEnd_toStartOf="@id/athletics"
+        app:layout_constraintBottom_toTopOf="@id/viewDeception"/>
+
+    <TextView
+        android:id="@+id/viewDeception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewArcana"
+        app:layout_constraintStart_toEndOf="@id/deception"
+        app:layout_constraintEnd_toStartOf="@id/history"
+        app:layout_constraintBottom_toTopOf="@id/viewInsight"/>
+
+    <TextView
+        android:id="@+id/viewInsight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewDeception"
+        app:layout_constraintStart_toEndOf="@id/insight"
+        app:layout_constraintEnd_toStartOf="@id/intimidation"
+        app:layout_constraintBottom_toTopOf="@id/viewInvestigation"/>
+
+    <TextView
+        android:id="@+id/viewInvestigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewInsight"
+        app:layout_constraintStart_toEndOf="@id/investigation"
+        app:layout_constraintEnd_toStartOf="@id/medicine"
+        app:layout_constraintBottom_toTopOf="@id/viewNature"/>
+
+    <TextView
+        android:id="@+id/viewNature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewInvestigation"
+        app:layout_constraintStart_toEndOf="@id/nature"
+        app:layout_constraintEnd_toStartOf="@id/perception"
+        app:layout_constraintBottom_toTopOf="@id/viewPerformance"/>
+
+    <TextView
+        android:id="@+id/viewPerformance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewNature"
+        app:layout_constraintStart_toEndOf="@id/performance"
+        app:layout_constraintEnd_toStartOf="@id/persuasion"
+        app:layout_constraintBottom_toTopOf="@id/viewReligion"/>
+
+    <TextView
+        android:id="@+id/viewReligion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewPerformance"
+        app:layout_constraintStart_toEndOf="@id/religion"
+        app:layout_constraintEnd_toStartOf="@id/sleightOfHand"
+        app:layout_constraintBottom_toTopOf="@id/viewStealth"/>
+
+    <TextView
+        android:id="@+id/viewStealth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewReligion"
+        app:layout_constraintStart_toEndOf="@id/stealth"
+        app:layout_constraintEnd_toStartOf="@id/survival"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/animalHandling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/animal_handling"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsView"
+        app:layout_constraintStart_toEndOf="@id/viewAcrobatics"
+        app:layout_constraintBottom_toTopOf="@id/athletics"
+        app:layout_constraintEnd_toStartOf="@id/viewAnimalHandling"/>
+
+    <TextView
+        android:id="@+id/athletics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/athletics"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/viewArcana"
+        app:layout_constraintTop_toBottomOf="@id/animalHandling"
+        app:layout_constraintBottom_toTopOf="@id/history"
+        app:layout_constraintEnd_toStartOf="@id/viewAthletics" />
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/history"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/viewDeception"
+        app:layout_constraintTop_toBottomOf="@id/athletics"
+        app:layout_constraintBottom_toTopOf="@id/intimidation"
+        app:layout_constraintEnd_toStartOf="@id/viewHistory" />
+
+    <TextView
+        android:id="@+id/intimidation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/intimidation"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/viewInsight"
+        app:layout_constraintTop_toBottomOf="@id/history"
+        app:layout_constraintBottom_toTopOf="@id/medicine"
+        app:layout_constraintEnd_toStartOf="@id/viewIntimidation"/>
+
+    <TextView
+        android:id="@+id/medicine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/viewInvestigation"
+        app:layout_constraintTop_toBottomOf="@id/intimidation"
+        app:layout_constraintBottom_toTopOf="@id/perception"
+        app:layout_constraintEnd_toStartOf="@id/viewMedicine" />
+
+    <TextView
+        android:id="@+id/perception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/perception"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/viewNature"
+        app:layout_constraintTop_toBottomOf="@id/medicine"
+        app:layout_constraintBottom_toTopOf="@id/persuasion"
+        app:layout_constraintEnd_toStartOf="@id/viewPerception" />
+
+    <TextView
+        android:id="@+id/persuasion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/persuasion"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/viewPerformance"
+        app:layout_constraintTop_toBottomOf="@id/perception"
+        app:layout_constraintBottom_toTopOf="@id/sleightOfHand"
+        app:layout_constraintEnd_toStartOf="@id/viewPersuasion" />
+
+    <TextView
+        android:id="@+id/sleightOfHand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sleight_of_hand"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/viewReligion"
+        app:layout_constraintTop_toBottomOf="@id/persuasion"
+        app:layout_constraintBottom_toTopOf="@id/survival"
+        app:layout_constraintEnd_toStartOf="@id/viewSleightOfHand" />
+
+    <TextView
+        android:id="@+id/survival"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survival"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/viewStealth"
+        app:layout_constraintTop_toBottomOf="@id/sleightOfHand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/viewSurvival" />
+
+    <TextView
+        android:id="@+id/viewAnimalHandling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsView"
+        app:layout_constraintStart_toEndOf="@id/animalHandling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewAthletics" />
+
+    <TextView
+        android:id="@+id/viewAthletics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewAnimalHandling"
+        app:layout_constraintStart_toEndOf="@id/athletics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewHistory"/>
+
+    <TextView
+        android:id="@+id/viewHistory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewAthletics"
+        app:layout_constraintStart_toEndOf="@id/history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewIntimidation"/>
+
+    <TextView
+        android:id="@+id/viewIntimidation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewHistory"
+        app:layout_constraintStart_toEndOf="@id/intimidation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewMedicine"/>
+
+    <TextView
+        android:id="@+id/viewMedicine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewIntimidation"
+        app:layout_constraintStart_toEndOf="@id/medicine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewPerception"/>
+
+    <TextView
+        android:id="@+id/viewPerception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewMedicine"
+        app:layout_constraintStart_toEndOf="@id/perception"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewPersuasion"/>
+
+    <TextView
+        android:id="@+id/viewPersuasion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewPerception"
+        app:layout_constraintStart_toEndOf="@id/persuasion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewSleightOfHand"/>
+
+    <TextView
+        android:id="@+id/viewSleightOfHand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewPersuasion"
+        app:layout_constraintStart_toEndOf="@id/sleightOfHand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewSurvival"/>
+
+    <TextView
+        android:id="@+id/viewSurvival"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/viewSleightOfHand"
+        app:layout_constraintStart_toEndOf="@id/survival"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>

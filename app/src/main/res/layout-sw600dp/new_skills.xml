@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/skillsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/skills"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/acrobatics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/acrobatics"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/arcana"
+        app:layout_constraintEnd_toStartOf="@id/editAcrobatics"/>
+
+    <TextView
+        android:id="@+id/arcana"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/arcana"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/acrobatics"
+        app:layout_constraintBottom_toTopOf="@id/deception"
+        app:layout_constraintEnd_toStartOf="@id/editArcana" />
+
+    <TextView
+        android:id="@+id/deception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/deception"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/arcana"
+        app:layout_constraintBottom_toTopOf="@id/insight"
+        app:layout_constraintEnd_toStartOf="@id/editDeception" />
+
+    <TextView
+        android:id="@+id/insight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/insight"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deception"
+        app:layout_constraintBottom_toTopOf="@id/investigation"
+        app:layout_constraintEnd_toStartOf="@id/editInsight"/>
+
+    <TextView
+        android:id="@+id/investigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/investigation"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/insight"
+        app:layout_constraintBottom_toTopOf="@id/nature"
+        app:layout_constraintEnd_toStartOf="@id/editInvestigation" />
+
+    <TextView
+        android:id="@+id/nature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/nature"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/investigation"
+        app:layout_constraintBottom_toTopOf="@id/performance"
+        app:layout_constraintEnd_toStartOf="@id/editNature" />
+
+    <TextView
+        android:id="@+id/performance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/performance"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nature"
+        app:layout_constraintBottom_toTopOf="@id/religion"
+        app:layout_constraintEnd_toStartOf="@id/editPerformance" />
+
+    <TextView
+        android:id="@+id/religion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/religion"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/performance"
+        app:layout_constraintBottom_toTopOf="@id/stealth"
+        app:layout_constraintEnd_toStartOf="@id/editReligion" />
+
+    <TextView
+        android:id="@+id/stealth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stealth"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/religion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/editStealth" />
+
+    <EditText
+        android:id="@+id/editAcrobatics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/skillsView"
+        app:layout_constraintStart_toEndOf="@id/acrobatics"
+        app:layout_constraintEnd_toStartOf="@id/animalHandling"
+        app:layout_constraintBottom_toTopOf="@id/editArcana" />
+
+    <EditText
+        android:id="@+id/editArcana"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editAcrobatics"
+        app:layout_constraintStart_toEndOf="@id/arcana"
+        app:layout_constraintEnd_toStartOf="@id/athletics"
+        app:layout_constraintBottom_toTopOf="@id/editDeception"/>
+
+    <EditText
+        android:id="@+id/editDeception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editArcana"
+        app:layout_constraintStart_toEndOf="@id/deception"
+        app:layout_constraintEnd_toStartOf="@id/history"
+        app:layout_constraintBottom_toTopOf="@id/editInsight"/>
+
+    <EditText
+        android:id="@+id/editInsight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editDeception"
+        app:layout_constraintStart_toEndOf="@id/insight"
+        app:layout_constraintEnd_toStartOf="@id/intimidation"
+        app:layout_constraintBottom_toTopOf="@id/editInvestigation"/>
+
+    <EditText
+        android:id="@+id/editInvestigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editInsight"
+        app:layout_constraintStart_toEndOf="@id/investigation"
+        app:layout_constraintEnd_toStartOf="@id/medicine"
+        app:layout_constraintBottom_toTopOf="@id/editNature"/>
+
+    <EditText
+        android:id="@+id/editNature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editInvestigation"
+        app:layout_constraintStart_toEndOf="@id/nature"
+        app:layout_constraintEnd_toStartOf="@id/perception"
+        app:layout_constraintBottom_toTopOf="@id/editPerformance"/>
+
+    <EditText
+        android:id="@+id/editPerformance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editNature"
+        app:layout_constraintStart_toEndOf="@id/performance"
+        app:layout_constraintEnd_toStartOf="@id/persuasion"
+        app:layout_constraintBottom_toTopOf="@id/editReligion"/>
+
+    <EditText
+        android:id="@+id/editReligion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editPerformance"
+        app:layout_constraintStart_toEndOf="@id/religion"
+        app:layout_constraintEnd_toStartOf="@id/sleightOfHand"
+        app:layout_constraintBottom_toTopOf="@id/editStealth"/>
+
+    <EditText
+        android:id="@+id/editStealth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editReligion"
+        app:layout_constraintStart_toEndOf="@id/stealth"
+        app:layout_constraintEnd_toStartOf="@id/survival"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/animalHandling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/animal_handling"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsView"
+        app:layout_constraintStart_toEndOf="@id/editAcrobatics"
+        app:layout_constraintBottom_toTopOf="@id/athletics"
+        app:layout_constraintEnd_toStartOf="@id/editAnimalHandling"/>
+
+    <TextView
+        android:id="@+id/athletics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/athletics"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/editArcana"
+        app:layout_constraintTop_toBottomOf="@id/animalHandling"
+        app:layout_constraintBottom_toTopOf="@id/history"
+        app:layout_constraintEnd_toStartOf="@id/editAthletics" />
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/history"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/editDeception"
+        app:layout_constraintTop_toBottomOf="@id/athletics"
+        app:layout_constraintBottom_toTopOf="@id/intimidation"
+        app:layout_constraintEnd_toStartOf="@id/editHistory" />
+
+    <TextView
+        android:id="@+id/intimidation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/intimidation"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/editInsight"
+        app:layout_constraintTop_toBottomOf="@id/history"
+        app:layout_constraintBottom_toTopOf="@id/medicine"
+        app:layout_constraintEnd_toStartOf="@id/editIntimidation"/>
+
+    <TextView
+        android:id="@+id/medicine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/editInvestigation"
+        app:layout_constraintTop_toBottomOf="@id/intimidation"
+        app:layout_constraintBottom_toTopOf="@id/perception"
+        app:layout_constraintEnd_toStartOf="@id/editMedicine" />
+
+    <TextView
+        android:id="@+id/perception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/perception"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/editNature"
+        app:layout_constraintTop_toBottomOf="@id/medicine"
+        app:layout_constraintBottom_toTopOf="@id/persuasion"
+        app:layout_constraintEnd_toStartOf="@id/editPerception" />
+
+    <TextView
+        android:id="@+id/persuasion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/persuasion"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/editPerformance"
+        app:layout_constraintTop_toBottomOf="@id/perception"
+        app:layout_constraintBottom_toTopOf="@id/sleightOfHand"
+        app:layout_constraintEnd_toStartOf="@id/editPersuasion" />
+
+    <TextView
+        android:id="@+id/sleightOfHand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sleight_of_hand"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/editReligion"
+        app:layout_constraintTop_toBottomOf="@id/persuasion"
+        app:layout_constraintBottom_toTopOf="@id/survival"
+        app:layout_constraintEnd_toStartOf="@id/editSleightOfHand" />
+
+    <TextView
+        android:id="@+id/survival"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survival"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toEndOf="@id/editStealth"
+        app:layout_constraintTop_toBottomOf="@id/sleightOfHand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/editSurvival" />
+
+    <EditText
+        android:id="@+id/editAnimalHandling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/skillsView"
+        app:layout_constraintStart_toEndOf="@id/animalHandling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editAthletics" />
+
+    <EditText
+        android:id="@+id/editAthletics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editAnimalHandling"
+        app:layout_constraintStart_toEndOf="@id/athletics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editHistory"/>
+
+    <EditText
+        android:id="@+id/editHistory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editAthletics"
+        app:layout_constraintStart_toEndOf="@id/history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editIntimidation"/>
+
+    <EditText
+        android:id="@+id/editIntimidation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editHistory"
+        app:layout_constraintStart_toEndOf="@id/intimidation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editMedicine"/>
+
+    <EditText
+        android:id="@+id/editMedicine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editIntimidation"
+        app:layout_constraintStart_toEndOf="@id/medicine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editPerception"/>
+
+    <EditText
+        android:id="@+id/editPerception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editMedicine"
+        app:layout_constraintStart_toEndOf="@id/perception"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editPersuasion"/>
+
+    <EditText
+        android:id="@+id/editPersuasion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editPerception"
+        app:layout_constraintStart_toEndOf="@id/persuasion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editSleightOfHand"/>
+
+    <EditText
+        android:id="@+id/editSleightOfHand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editPersuasion"
+        app:layout_constraintStart_toEndOf="@id/sleightOfHand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editSurvival"/>
+
+    <EditText
+        android:id="@+id/editSurvival"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editSleightOfHand"
+        app:layout_constraintStart_toEndOf="@id/survival"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>
