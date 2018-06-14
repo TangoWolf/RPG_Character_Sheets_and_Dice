@@ -23,5 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_gravity="bottom|end"
-        android:src="@drawable/ic_map"/>
+        android:src="@drawable/ic_map"
+        android:contentDescription="@string/fab_description"/>
 </android.support.design.widget.CoordinatorLayout>

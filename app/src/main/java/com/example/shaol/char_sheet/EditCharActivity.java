@@ -886,17 +886,17 @@ public class EditCharActivity extends AppCompatActivity implements LoaderManager
 
         int rowsAffected = getContentResolver().update(mCurrentCharacterUri, values, null, null);
         if (rowsAffected == 0) {
-            Toast.makeText(this, "Failed to update character", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.failed_to_update_character, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Character updated!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.character_updated, Toast.LENGTH_SHORT).show();
         }
     }
 
     private void showUnsavedChangesDialog(DialogInterface.OnClickListener discardButtonClickListener) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Discard your changes and quit editing?");
-        builder.setPositiveButton("Discard", discardButtonClickListener);
-        builder.setNegativeButton("Keep editing", new DialogInterface.OnClickListener() {
+        builder.setMessage(R.string.discard_changes_quit_editing);
+        builder.setPositiveButton(R.string.discard_changes, discardButtonClickListener);
+        builder.setNegativeButton(R.string.keep_editing, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 if (dialog != null) {
                     dialog.dismiss();

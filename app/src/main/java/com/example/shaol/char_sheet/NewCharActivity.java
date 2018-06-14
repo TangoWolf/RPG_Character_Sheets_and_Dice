@@ -630,17 +630,17 @@ public class NewCharActivity extends AppCompatActivity implements LoaderManager.
         Uri newUri = getContentResolver().insert(CharacterEntry.CONTENT_URI, values);
 
         if (newUri == null) {
-            Toast.makeText(this, "Failed to create character", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.failed_to_create_character, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Character created!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.character_created, Toast.LENGTH_SHORT).show();
         }
     }
 
     private void showUnsavedChangesDialog(DialogInterface.OnClickListener discardButtonClickListener) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Discard your changes and quit editing?");
-        builder.setPositiveButton("Discard", discardButtonClickListener);
-        builder.setNegativeButton("Keep editing", new DialogInterface.OnClickListener() {
+        builder.setMessage(R.string.discard_changes_quit_editing);
+        builder.setPositiveButton(R.string.discard_changes, discardButtonClickListener);
+        builder.setNegativeButton(R.string.keep_editing, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 if (dialog != null) {
                     dialog.dismiss();

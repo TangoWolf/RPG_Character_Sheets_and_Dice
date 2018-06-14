@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">RPG Character sheets and Dice</string>
     <string name="no_character">No Characters</string>
+    <string name="fab_description">Button to find local gaming stores</string>
 
     <string name="character_name">Character Name</string>
     <string name="character_class">Character Class</string>
@@ -106,6 +107,12 @@
     <string name="save_changes">Save Changes</string>
     <string name="discard_changes">Discard Changes</string>
     <string name="delete_character">Delete Character</string>
+    <string name="failed_to_create_character">Failed To create character</string>
+    <string name="failed_to_update_character">Failed To update character</string>
+    <string name="discard_changes_quit_editing">Discard your changes and quit editing?</string>
+    <string name="keep_editing">Keep editing</string>
+    <string name="character_created">Character created!</string>
+    <string name="character_updated">Character updated!</string>
     <string name="make_skill_rolls">Make Skill Roll</string>
     <string name="make_saving_rolls">Make Saving Roll</string>
     <string name="make_attack_rolls">Make Attack Roll</string>
